@@ -1,0 +1,322 @@
+:root {
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  --clr-wht-basic: #ffffff;
+  --clr-wht-cultured: #f3f3f3;
+  --clr-wht-2: #fbfbfb;
+  --clr-gry-dim: #696969;
+  --clr-red-rufous: #A30800;
+  --clr-red-ioe: #ff0c00;
+  --clr-red-rufous-2: #990800;
+  --clr-red-rosso-corsa: #E00B00;
+  --clr-red-bittersweet: #FF645C;
+  --clr-blue-star-command:#0077B5;
+  --clr-blue-lapis-lazuli:#005D8F;
+}
+
+body {
+  margin: 0;
+}
+
+body p, body h1, body h2, body h3, body h4, body a {
+  color: #4f4f4f;
+  margin: 0;
+  padding: 0;
+}
+
+body ul {
+  list-style: none;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body .select-menu select {
+  outline: none;
+  padding: 1rem .7rem;
+  border-radius: 1rem;
+  border: unset;
+  width: 100%;
+  background-color: var(--clr-wht-cultured);
+}
+
+body .src-bar {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: var(--clr-wht-cultured);
+  padding: 1rem .7rem;
+  border-radius: 1rem;
+}
+
+body .src-bar input {
+  outline: none;
+  width: 100%;
+  border: 0px;
+  background: transparent;
+}
+
+body button {
+  border: unset;
+  cursor: pointer;
+  width: 155px;
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--clr-blue-star-command)), to(var(--clr-blue-lapis-lazuli)));
+  background-image: linear-gradient(to right, var(--clr-blue-star-command), var(--clr-blue-lapis-lazuli));
+  padding: 1rem .7rem;
+  border-radius: 1rem;
+  color: var(--clr-wht-basic);
+  font-size: medium;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+body button:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--clr-blue-lapis-lazuli)), to(var(--clr-blue-star-command)));
+  background-image: linear-gradient(to right, var(--clr-blue-lapis-lazuli), var(--clr-blue-star-command));
+}
+
+#main-content #login {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 65% 35%;
+      grid-template-columns: 65% 35%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  min-height: 100vh;
+      grid-template-areas: 's1 s2';
+}
+
+#main-content #login-banner {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: s1;
+  background-image: url(../../assets/img/banner/login-banner-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#main-content #login-banner #content-login-banner {
+  width: 68%;
+  margin: auto;
+}
+
+#main-content #login-banner #content-login-banner h1 {
+  font-size: 54px;
+  color: var(--clr-wht-basic);
+}
+
+#main-content #login-banner #content-login-banner h2 {
+  color: var(--clr-wht-basic);
+}
+
+#main-content #login-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: s2;
+}
+
+#main-content #login-form #form-header {
+  padding: 1rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid var(--clr-wht-cultured);
+}
+
+#main-content #login-form #form-header .form-header-menu {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-content #login-form #form-header .form-header-menu a i {
+  font-size: 25px;
+  color: var(--clr-blue-star-command);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#main-content #login-form #form-header .form-header-menu a i:hover {
+  color: var(--clr-blue-lapis-lazuli);
+}
+
+#main-content #login-form #form-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.6rem;
+  height: 90%;
+}
+
+#main-content #login-form #form-content #title-header {
+  text-align: center;
+  max-width: 45%;
+}
+
+#main-content #login-form #form-content #title-header img {
+  width: 100%;
+}
+
+#main-content #login-form #form-content form {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#main-content #login-form #form-content form .form-input {
+  display: -ms-grid;
+  display: grid;
+  gap: 5px;
+}
+
+#main-content #login-form #form-content form label {
+  font-size: medium;
+}
+
+#main-content #login-form #form-content form input {
+  font-size: medium;
+}
+
+#main-content #login-form #form-content form #btn-signin, #main-content #login-form #form-content form #btn-signup {
+  margin: 0 auto;
+}
+
+#main-content #login-form #form-content form #btn-signin {
+  border: unset;
+  cursor: pointer;
+  width: 155px;
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--clr-blue-star-command)), to(var(--clr-blue-lapis-lazuli)));
+  background-image: linear-gradient(to right, var(--clr-blue-star-command), var(--clr-blue-lapis-lazuli));
+  padding: 1rem .7rem;
+  border-radius: 1rem;
+  color: var(--clr-wht-basic);
+  font-size: medium;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-align: center;
+}
+
+#main-content #login-form #form-content form #btn-signin:hover {
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--clr-blue-lapis-lazuli)), to(var(--clr-blue-star-command)));
+  background-image: linear-gradient(to right, var(--clr-blue-lapis-lazuli), var(--clr-blue-star-command));
+}
+
+#main-content #login-form #form-content form #sosmed-login {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#main-content #login-form #form-content form #sosmed-login #title {
+  color: #CCCCCC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-content #login-form #form-content form #sosmed-login #title p {
+  font-size: small;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#main-content #login-form #form-content form #sosmed-login #title .line {
+  width: 50%;
+  border-bottom: 1px solid #CCCCCC;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+#main-content #login-form #form-content form #sosmed-login .icon-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#main-content #login-form #form-content form #sosmed-login .icon-button a {
+  border: 2px solid #f3f3f3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+#main-content #login-form #form-content form #sosmed-login .icon-button a img {
+  max-width: 30px;
+  margin: auto;
+}
+
+#main-content #login-form #form-content form #sosmed-login .sign-up {
+  font-size: medium;
+}
+
+#main-content #login-form #form-content form #sosmed-login .sign-up a {
+  color: var(--clr-blue-star-command);
+}
+
+@media only screen and (max-width: 1024px) {
+  #main-content #login {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 's2';
+  }
+  #main-content #login #login-banner {
+    display: none;
+  }
+  #main-content #login #login-form .from-signup {
+    margin: 2rem 0;
+  }
+}
+/*# sourceMappingURL=login-signup.css.map */
