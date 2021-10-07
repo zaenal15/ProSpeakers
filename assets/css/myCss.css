@@ -7,11 +7,10 @@
   --clr-gry-dim: #696969;
   --clr-red-rosso-corsa: #E00B00;
   --clr-red-barn: #7A0600;
-  --clr-blue-dark-cornflower: #003E7F;
-  --clr-blue-honolulu: #0068AF;
   --clr-blue-azure:#E1F5FF;
   --clr-blue-star-command:#0077B5;
   --clr-blue-lapis-lazuli:#005D8F;
+  --clr-blue-honolulu: #0068AF;
   --clr-orng-bittersweet:#FF645C;
   --clr-orng-tart:#FF3D33;
 }
@@ -1737,7 +1736,7 @@ body .checkbox :checked ~ .checkmark {
   cursor: pointer;
   width: 48px;
   height: 48px;
-  background-color: var(--clr-blue-dark-cornflower);
+  background-color: var(--clr-blue-lapis-lazuli);
   z-index: 100;
   display: none;
   border-radius: 60px;
@@ -1926,8 +1925,14 @@ body .checkbox :checked ~ .checkmark {
     display: unset;
   }
   #main-content #more-speaker #more-speaker-content #row-more-speaker {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 1rem;
   }
   #main-content #more-speaker #more-speaker-content #row-more-speaker #filter-speaker {
     display: none;

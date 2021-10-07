@@ -13,6 +13,17 @@ $(document).ready(function(){
     }); 
 });
 
+//filter speaker
+$('#openFilter').on('click', function(){
+  $('#filter-speaker').show();
+  $('#openFilter').hide();
+  $('#closeFilter').show();
+});
+$('#closeFilter').on('click', function(){
+  $('#filter-speaker').hide();
+  $('#openFilter').show();
+  $('#closeFilter').hide();
+});
 
 //dasboard filter
 $(document).ready(function(){
