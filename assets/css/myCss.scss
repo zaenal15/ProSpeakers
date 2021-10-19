@@ -1445,6 +1445,7 @@ input.attribute_radio {
           gap: 1rem;
         }
         #card-modal-content1{
+          display: none !important;
           display: grid;
           padding: 3rem;
           gap: 1rem;
@@ -1522,7 +1523,6 @@ input.attribute_radio {
         }
         
         #card-modal-content2{
-          display: none !important; 
           display: grid;
           padding: 3rem;
           grid-template-rows: 1.7fr auto;
@@ -1561,7 +1561,6 @@ input.attribute_radio {
 
               #opsi-eo-show{
                 background: var(--clr-wht-2);
-                padding: 1rem;
                 display: flex;
                 flex-direction: column;
                 gap: 0.5rem;
