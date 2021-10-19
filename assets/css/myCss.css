@@ -2135,6 +2135,166 @@ input.attribute_radio:checked + label {
   border-radius: 20px;
 }
 
+#booking-popup #modal-calender-row .card-modal-calender .modal-content-kalender {
+  background: cornflowerblue;
+}
+
+.header-calender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.row-calender {
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem;
+}
+
+#date {
+  width: 30px;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.content-kalender {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.tombol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#delAgenda {
+  background-color: var(--red);
+  padding: 10px 35px;
+  margin-bottom: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+#saveAgenda, #startDate, #endDate {
+  margin: auto;
+  padding: 10px 35px;
+  margin-bottom: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: var(--green);
+  border-width: 2px;
+  border: none;
+}
+
+#cancelButton {
+  padding: 10px 35px;
+  margin-bottom: auto;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: var(--blue);
+  border-width: 2px;
+  border: none;
+}
+
+.bungkus {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+.bungkus1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.bungkus2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.bungkus4 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#startdate, #finishdate {
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+}
+
+#agenda, #description {
+  padding: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+}
+
+#calendar-box {
+  display: -ms-grid;
+  display: grid;
+}
+
+#calendar-box .selected-date {
+  color: var(--darkblue) !important;
+  background-color: var(--blue);
+  border-radius: 8px;
+  position: static;
+  width: 57.57px;
+  height: 47.67px;
+  left: 172.71px;
+  top: 0px;
+}
+
+#calendar-box table td, #calendar-box table th {
+  width: 100%;
+  color: var(--black);
+  text-align: center;
+}
+
+#calendar-box table td button, #calendar-box table th button {
+  position: static;
+  width: 57.57px;
+  height: 47.67px;
+  left: 172.71px;
+  border-radius: none;
+  border-style: none;
+  background-color: var(--white);
+}
+
 @media (max-width: 1024px) {
   #main-content {
     -ms-grid-columns: unset;

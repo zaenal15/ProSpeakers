@@ -1,3 +1,111 @@
+
+//kalender
+$(document).ready(function() {
+  parent = $('#calendar-box')
+  date = new Date()
+  createCalendar(parent, date)
+})
+
+const monthNamesFull      = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+const monthNames          = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const dayNamesFull        = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const dayNames            = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+// CREATE CALENDAR --ir
+function createCalendar(parent, fullDateCalendar) {
+  if(fullDateCalendar) fullDateCalendar = fullDateCalendar
+  else fullDateCalendar = new Date()
+  periode = padTwo((fullDateCalendar.getMonth()+1))+"-"+fullDateCalendar.getFullYear()
+  numberOfDays = new Date(fullDateCalendar.getFullYear(), fullDateCalendar.getMonth()+1, 0).getDate()
+  parent.append('<table id="myCalendar"><thead></thead><tbody></tbody></table>')
+  tableCalendar = parent.find('#myCalendar')
+  tableCalendar.find('thead').append('<tr></tr>')
+  for (let x = 0; x < dayNames.length; x++) {
+    tableCalendar.find('thead tr:last').append('<td align="center">'+dayNames[x]+'</td>')
+  }
+  i = 1
+  for (let x = 1; x <= numberOfDays; x++) {
+    dt = new Date(fullDateCalendar.getFullYear()+", "+padTwo((fullDateCalendar.getMonth()+1))+", "+x)
+    if(i > 7) i = 1
+    if(i++ == 1) {tableCalendar.find('tbody').append('<tr></tr>')}
+    if(dt.getDay() == 0 || dt.getDay() == 6) textColor = 'color:red; font-weight:900'; else textColor = 'color:black';
+    if(x == 1){
+      for (let y = 0; y < dayNames.length; y++) {
+        if(dt.getDay() == y) {tableCalendar.find('tbody tr:last').append('<td align="center"><input type="hidden" id="agendaDate'+x+'"><input type="hidden" id="noteDate'+x+'"><button value="'+x+'" id="date'+x+'" class="button button-sm" style="'+textColor+'">'+x+'</button></td>'); break;}
+        else{
+          tableCalendar.find('tbody tr:last').append('<td></td>')
+          i++
+        }  
+      }
+    }
+    else tableCalendar.find('tr:last').append('<td align="center"><input type="hidden" id="agendaDate'+x+'"><input type="hidden" id="noteDate'+x+'"><button value="'+x+'" id="date'+x+'" class="button button-sm" style="'+textColor+'">'+x+'</button></td>')
+    // tableCalendar.find('#date'+x).attr("onclick", "fillAgenda(this, \""+x+"\")")
+    if(x == fullDateCalendar.getDate() && fullDateCalendar.getMonth() == new Date().getMonth() && fullDateCalendar.getFullYear() == new Date().getFullYear()) tableCalendar.find('button:last').css('border', '2px solid var(--btn-info)')
+  }
+
+  $('#myCalendar button').on('click', function() {
+    $('#myCalendar button').removeClass('selected-date')
+    $(this).toggleClass('selected-date')
+    $('#startdate').val($(this).val())
+  })
+
+  $('#saveAgenda').on('click', function() {
+    agendaVal = $('#agenda').val()
+    description = $('#description').val()
+    priority = $("input[name='priority']:checked").val()
+    selectedDate = $('#myCalendar .selected-date').val()
+    $('#myCalendar .selected-date').html(selectedDate + "<br>" + agendaVal +"<br>"+ description +"<br>"+ priority)
+    closeModal();
+  })
+   for (let date = 0; startdate <finishdate.length; date++) {
+     const date = array[startdate];
+     console.log(date);
+   }
+  $('#delAgenda').on('click', function() {
+    selectedDate = $('#myCalendar .selected-date').val()
+    $('#myCalendar .selected-date').html(selectedDate).removeClass('selected-date')
+    closeModal();
+  })
+  $('#cancelButton').on('click', function(){
+    closeModal();
+  })
+}
+
+// PAD TWO INTO INT --it
+function padTwo(n) {
+  if(n.toString().length == 1) n = ("0" + n)
+  return n
+}
+var modal = document.getElementById('myModal');
+var btn = document.getElementById("calendar-box");
+
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+window.onclick = function(e) {
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+//function initButtons() {
+//  document.getElementById('nextButton').addEventListener('click', () => {
+//    nav++;
+//    load();
+//  });
+//
+//  document.getElementById('backButton').addEventListener('click', () => {
+//    nav--;
+//    load();
+//  });
+//}
+
+function closeModal(){
+  modal.style.display = 'none';
+}
+
+
 //srolUp
 $(document).ready(function(){ 
     $(window).scroll(function(){ 
