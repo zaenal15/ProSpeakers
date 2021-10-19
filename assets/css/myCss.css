@@ -2135,11 +2135,13 @@ input.attribute_radio:checked + label {
   border-radius: 20px;
 }
 
-#booking-popup #modal-calender-row .card-modal-calender .modal-content-kalender {
-  background: cornflowerblue;
+.row-calender {
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem;
 }
 
-.header-calender {
+.row-calender .header-calender {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2147,17 +2149,11 @@ input.attribute_radio:checked + label {
       justify-content: space-around;
 }
 
-.row-calender {
-  display: -ms-grid;
-  display: grid;
-  gap: 3rem;
-}
-
-#date {
+.row-calender #date {
   width: 30px;
 }
 
-input {
+.row-calender input {
   padding: 10px;
   margin-bottom: auto;
   margin-top: 10px;
@@ -2165,19 +2161,19 @@ input {
   border: none;
 }
 
-.content-kalender {
+.row-calender .content-kalender {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.tombol {
+.row-calender .tombol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#delAgenda {
+.row-calender #delAgenda {
   background-color: var(--red);
   padding: 10px 35px;
   margin-bottom: auto;
@@ -2186,7 +2182,7 @@ input {
   border: none;
 }
 
-#saveAgenda, #startDate, #endDate {
+.row-calender #saveAgenda, .row-calender #startDate, .row-calender #endDate {
   margin: auto;
   padding: 10px 35px;
   margin-bottom: auto;
@@ -2197,7 +2193,7 @@ input {
   border: none;
 }
 
-#cancelButton {
+.row-calender #cancelButton {
   padding: 10px 35px;
   margin-bottom: auto;
   margin-top: 10px;
@@ -2207,14 +2203,14 @@ input {
   border: none;
 }
 
-.bungkus {
+.row-calender .bungkus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
 }
 
-.bungkus1 {
+.row-calender .bungkus1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2225,7 +2221,7 @@ input {
   width: 100%;
 }
 
-.bungkus2 {
+.row-calender .bungkus2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2236,13 +2232,13 @@ input {
   width: 100%;
 }
 
-.bungkus4 {
+.row-calender .bungkus4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-#startdate, #finishdate {
+.row-calender #startdate, .row-calender #finishdate {
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2252,7 +2248,7 @@ input {
   border: none;
 }
 
-#agenda, #description {
+.row-calender #agenda, .row-calender #description {
   padding: 10px;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -2263,12 +2259,12 @@ input {
   border: none;
 }
 
-#calendar-box {
+.row-calender #calendar-box {
   display: -ms-grid;
   display: grid;
 }
 
-#calendar-box .selected-date {
+.row-calender #calendar-box .selected-date {
   color: var(--darkblue) !important;
   background-color: var(--blue);
   border-radius: 8px;
@@ -2279,13 +2275,13 @@ input {
   top: 0px;
 }
 
-#calendar-box table td, #calendar-box table th {
+.row-calender #calendar-box table td, .row-calender #calendar-box table th {
   width: 100%;
   color: var(--black);
   text-align: center;
 }
 
-#calendar-box table td button, #calendar-box table th button {
+.row-calender #calendar-box table td button, .row-calender #calendar-box table th button {
   position: static;
   width: 57.57px;
   height: 47.67px;
