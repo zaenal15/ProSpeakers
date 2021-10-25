@@ -1,3 +1,5 @@
+
+
 //calender
 $(document).ready(function() {
   parent = $('#calendar-box')
@@ -55,7 +57,15 @@ function padTwo(n) {
 }
 var btn = document.getElementById("calendar-box");
 
-
+//user-profile-login
+$(document).ready(function(){
+  
+  var nr_main = document.querySelector("#nr_main");
+  nr_main.addEventListener("click", function(){
+    this.classList.toggle("active");
+  })
+  
+});
 
 //srolUp
 $(document).ready(function(){ 
@@ -72,14 +82,6 @@ $(document).ready(function(){
     }); 
 });
 
-var nr_main = document.querySelector("#nr_main");
-nr_main.addEventListener("click", function(){
-	this.classList.toggle("active");
-})
-
-$('#nr_main').on('click', function(){
-  $('.active').show();
-});
 
 //filter speaker
 $('#openFilter').on('click', function(){
@@ -160,67 +162,67 @@ jQuery(document).ready(function($)
   {
     $('#slider ul').animate(
       {
-   left: + slideWidth
-  }, 400,
-  function()
-  { //bring the last li to the beginning of the ul
-   $('#slider ul > a:last-child').prependTo('#slider ul');
-   //reset the ul's 'left' property as empty string 
-   $('#slider ul').css('left', '');
-  });
-  sTimer = sTimerLength;
- };
- 
- function moveRight()
- {
-   $('#slider ul').animate(
-     {
-   left: - slideWidth
-  }, 400,
-  function()
-  { //bring the first li to the end of the ul
-    $('#slider ul > a:first-child').appendTo('#slider ul');
-    //reset the ul's 'left' property as empty string
-    $('#slider ul').css('left', '');
-  });
-  sTimer = sTimerLength;
-};
-
-/*============button controls========*/
-$('.prev').click(function()
-{
-  moveLeft();
-});
-$('.next').click(function()
-{
-  moveRight();
-});
-setInterval(function()
-{
-  if( --sTimer == 0 )
-  {
-    moveRight();
-  }
-}, 1 );
-});
-$(window).resize(function()
-{
-  slideCount = $('#slider ul > a').length;
- slideWidth = $('#slider').width();
- sliderUlWidth = slideCount * slideWidth;
- $('#slider ul > a').css({ width: slideWidth });
- $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
-});
-
-//client//
-$('.carousel-client').bxSlider({
-  auto: true,
-  slideWidth: 234,
-  minSlides: 2,
-  maxSlides: 5,
-  controls: false,
-});
-
+        left: + slideWidth
+      }, 400,
+      function()
+      { //bring the last li to the beginning of the ul
+        $('#slider ul > a:last-child').prependTo('#slider ul');
+        //reset the ul's 'left' property as empty string 
+        $('#slider ul').css('left', '');
+      });
+      sTimer = sTimerLength;
+    };
+    
+    function moveRight()
+    {
+      $('#slider ul').animate(
+        {
+          left: - slideWidth
+        }, 400,
+        function()
+        { //bring the first li to the end of the ul
+          $('#slider ul > a:first-child').appendTo('#slider ul');
+          //reset the ul's 'left' property as empty string
+          $('#slider ul').css('left', '');
+        });
+        sTimer = sTimerLength;
+      };
+      
+      /*============button controls========*/
+      $('.prev').click(function()
+      {
+        moveLeft();
+      });
+      $('.next').click(function()
+      {
+        moveRight();
+      });
+      setInterval(function()
+      {
+        if( --sTimer == 0 )
+        {
+          moveRight();
+        }
+      }, 1 );
+    });
+    $(window).resize(function()
+    {
+      slideCount = $('#slider ul > a').length;
+      slideWidth = $('#slider').width();
+      sliderUlWidth = slideCount * slideWidth;
+      $('#slider ul > a').css({ width: slideWidth });
+      $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+    });
+    
+    //client//
+    $('.carousel-client').bxSlider({
+      auto: true,
+      slideWidth: 234,
+      minSlides: 2,
+      maxSlides: 5,
+      controls: false,
+    });
+    
 $('#search').click(function() {
   $('.search-popup').show();
   $('.search-bg').click(function() {
@@ -274,3 +276,4 @@ $('.page-scroll').on('click', function(e){
   e.preventDefault();
   
 });
+
