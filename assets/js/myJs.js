@@ -1,4 +1,4 @@
-//kalender
+//calender
 $(document).ready(function() {
   parent = $('#calendar-box')
   date = new Date()
@@ -10,7 +10,6 @@ const monthNames          = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "A
 const dayNamesFull        = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 const dayNames            = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-// CREATE CALENDAR --ir
 function createCalendar(parent, fullDateCalendar) {
   if(fullDateCalendar) fullDateCalendar = fullDateCalendar
   else fullDateCalendar = new Date()
@@ -48,41 +47,13 @@ function createCalendar(parent, fullDateCalendar) {
     $('#startdate').val($(this).val())
   })
 
-  $('#saveAgenda').on('click', function() {
-    agendaVal = $('#agenda').val()
-    description = $('#description').val()
-    priority = $("input[name='priority']:checked").val()
-    selectedDate = $('#myCalendar .selected-date').val()
-    $('#myCalendar .selected-date').html(selectedDate + "<br>" + agendaVal +"<br>"+ description +"<br>"+ priority)
-    closeModal();
-  })
-   for (let date = 0; startdate <finishdate.length; date++) {
-     const date = array[startdate];
-     console.log(date);
-   }
-  $('#delAgenda').on('click', function() {
-    selectedDate = $('#myCalendar .selected-date').val()
-    $('#myCalendar .selected-date').html(selectedDate).removeClass('selected-date')
-    closeModal();
-  })
-  $('#cancelButton').on('click', function(){
-    closeModal();
-  })
 }
 
-// PAD TWO INTO INT --it
 function padTwo(n) {
   if(n.toString().length == 1) n = ("0" + n)
   return n
 }
-var modal = document.getElementById('myModal');
 var btn = document.getElementById("calendar-box");
-
-window.onclick = function(e) {
-    if (e.target == modal) {
-        modal.style.display = "none";
-    }
-}
 
 
 
@@ -99,6 +70,15 @@ $(document).ready(function(){
         $("html, body").animate({ scrollTop: 0 }, 600); 
         return false; 
     }); 
+});
+
+var nr_main = document.querySelector("#nr_main");
+nr_main.addEventListener("click", function(){
+	this.classList.toggle("active");
+})
+
+$('#nr_main').on('click', function(){
+  $('.active').show();
 });
 
 //filter speaker
@@ -162,7 +142,6 @@ function navLinkClick() {
     navToggler.click();
   }
 }
-
 
 //banner header
 var sTimerLength = 1000;
