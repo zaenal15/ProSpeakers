@@ -57,14 +57,9 @@ function padTwo(n) {
 }
 var btn = document.getElementById("calendar-box");
 
-//user-profile-login
-$(document).ready(function(){
-  
-  var nr_main = document.querySelector("#nr_main");
-  nr_main.addEventListener("click", function(){
-    this.classList.toggle("active");
-  })
-  
+//user profile login
+$('#nr_main').on('click', function(){
+  this.classList.toggle("active");
 });
 
 //srolUp
