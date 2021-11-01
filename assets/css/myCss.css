@@ -7,19 +7,25 @@
   --clr-gry-dim: #696969;
   --clr-red-rosso-corsa: #E00B00;
   --clr-red-barn: #7A0600;
-  --clr-blue-azure:#E1F5FF;
-  --clr-blue-star-command:#0077B5;
-  --clr-blue-lapis-lazuli:#005D8F;
+  --clr-blue-azure: #E1F5FF;
+  --clr-blue-star-command: #0077B5;
+  --clr-blue-lapis-lazuli: #005D8F;
   --clr-blue-honolulu: #0068AF;
-  --clr-orng-bittersweet:#FF645C;
-  --clr-orng-tart:#FF3D33;
+  --clr-orng-bittersweet: #FF645C;
+  --clr-orng-tart: #FF3D33;
 }
 
 body {
   margin: 0;
 }
 
-body p, body h1, body h2, body h3, body h4, body textarea, body a {
+body p,
+body h1,
+body h2,
+body h3,
+body h4,
+body textarea,
+body a {
   color: #4f4f4f;
   margin: 0;
   padding: 0;
@@ -65,7 +71,9 @@ body textarea {
   font-size: medium;
 }
 
-body input, body select, body textarea {
+body input,
+body select,
+body textarea {
   outline: none;
   border: 0px;
   background: transparent;
@@ -92,7 +100,9 @@ body .src-bar input {
   font-size: large;
 }
 
-body .input-select, body .textarea-input, body .form {
+body .input-select,
+body .textarea-input,
+body .form {
   font-family: 'Poppins', sans-serif;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -860,7 +870,8 @@ body .checkbox :checked ~ .checkmark {
   text-align: center;
 }
 
-#main-content #client .bx-wrapper .bx-pager .bx-pager-item, #main-content #client .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+#main-content #client .bx-wrapper .bx-pager .bx-pager-item,
+#main-content #client .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -1018,7 +1029,13 @@ body .checkbox :checked ~ .checkmark {
       grid-template-areas: 'name email' 'phone org' 'location budget' 'about about' 'btn btn';
 }
 
-#main-content #form-contact #form-contact-content #card-form #form-content #name-form, #main-content #form-contact #form-contact-content #card-form #form-content #email-form, #main-content #form-contact #form-contact-content #card-form #form-content #phone-form, #main-content #form-contact #form-contact-content #card-form #form-content #org-form, #main-content #form-contact #form-contact-content #card-form #form-content #location-form, #main-content #form-contact #form-contact-content #card-form #form-content #budget-select, #main-content #form-contact #form-contact-content #card-form #form-content #about-form {
+#main-content #form-contact #form-contact-content #card-form #form-content #name-form,
+#main-content #form-contact #form-contact-content #card-form #form-content #email-form,
+#main-content #form-contact #form-contact-content #card-form #form-content #phone-form,
+#main-content #form-contact #form-contact-content #card-form #form-content #org-form,
+#main-content #form-contact #form-contact-content #card-form #form-content #location-form,
+#main-content #form-contact #form-contact-content #card-form #form-content #budget-select,
+#main-content #form-contact #form-contact-content #card-form #form-content #about-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1116,11 +1133,13 @@ body .checkbox :checked ~ .checkmark {
   margin: 0;
 }
 
-#main-content #footer #footer-content #kategori-populer a, #main-content #footer #footer-content #link a {
+#main-content #footer #footer-content #kategori-populer a,
+#main-content #footer #footer-content #link a {
   color: #696969;
 }
 
-#main-content #footer #footer-content #kategori-populer a:hover, #main-content #footer #footer-content #link a:hover {
+#main-content #footer #footer-content #kategori-populer a:hover,
+#main-content #footer #footer-content #link a:hover {
   color: var(--clr-red-ioe);
 }
 
@@ -1465,14 +1484,16 @@ body .checkbox :checked ~ .checkmark {
   margin-right: auto;
 }
 
-#profile-speaker #profile-speaker-content #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .from-speaker, #profile-speaker #profile-speaker-content #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .budget-speaker {
+#profile-speaker #profile-speaker-content #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .from-speaker,
+#profile-speaker #profile-speaker-content #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .budget-speaker {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 0.5rem;
 }
 
-#profile-speaker #profile-speaker-content #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .from-speaker div, #profile-speaker #profile-speaker-content #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .budget-speaker div {
+#profile-speaker #profile-speaker-content #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .from-speaker div,
+#profile-speaker #profile-speaker-content #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .budget-speaker div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1672,7 +1693,8 @@ body .checkbox :checked ~ .checkmark {
   text-overflow: ellipsis;
 }
 
-.row-card .content .from, .row-card .content .fee {
+.row-card .content .from,
+.row-card .content .fee {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1927,17 +1949,23 @@ input.attribute_radio:checked + label {
   color: var(--clr-wht-basic);
 }
 
-#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cencel, #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-next, #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-back, #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-submit {
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cancel,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-next,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-back,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-submit {
   padding: 10px;
   border-radius: 5px;
   font-size: larger;
 }
 
-#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cencel, #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-next, #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-back {
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cencel,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-next,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-back {
   width: 120px;
 }
 
-#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cencel, #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-back {
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cencel,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-back {
   background: transparent;
   border: 2px solid var(--clr-blue-star-command);
   color: var(--clr-blue-star-command);
@@ -1945,19 +1973,22 @@ input.attribute_radio:checked + label {
   transition: 0.3s;
 }
 
-#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cencel:hover, #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-back:hover {
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cencel:hover,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-back:hover {
   background: var(--clr-blue-star-command);
   color: var(--clr-wht-basic);
 }
 
-#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-next, #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-submit {
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-next,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-submit {
   background: var(--clr-orng-bittersweet);
   color: var(--clr-wht-basic);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
-#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-next:hover, #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-submit:hover {
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-next:hover,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-submit:hover {
   background: var(--clr-orng-tart);
 }
 
@@ -2278,7 +2309,9 @@ input.attribute_radio:checked + label {
   border: none;
 }
 
-.row-calender #saveAgenda, .row-calender #startDate, .row-calender #endDate {
+.row-calender #saveAgenda,
+.row-calender #startDate,
+.row-calender #endDate {
   margin: auto;
   padding: 10px 35px;
   margin-bottom: auto;
@@ -2334,7 +2367,8 @@ input.attribute_radio:checked + label {
   display: flex;
 }
 
-.row-calender #startdate, .row-calender #finishdate {
+.row-calender #startdate,
+.row-calender #finishdate {
   padding: 10px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2344,7 +2378,8 @@ input.attribute_radio:checked + label {
   border: none;
 }
 
-.row-calender #agenda, .row-calender #description {
+.row-calender #agenda,
+.row-calender #description {
   padding: 10px;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -2361,8 +2396,8 @@ input.attribute_radio:checked + label {
 }
 
 .row-calender #calendar-box .selected-date {
-  color: var(--darkblue) !important;
-  background-color: var(--blue);
+  color: var(--clr-wht-basic) !important;
+  background-color: var(--clr-blue-star-command);
   border-radius: 8px;
   position: static;
   width: 57.57px;
@@ -2371,13 +2406,15 @@ input.attribute_radio:checked + label {
   top: 0px;
 }
 
-.row-calender #calendar-box table td, .row-calender #calendar-box table th {
+.row-calender #calendar-box table td,
+.row-calender #calendar-box table th {
   width: 100%;
   color: var(--black);
   text-align: center;
 }
 
-.row-calender #calendar-box table td button, .row-calender #calendar-box table th button {
+.row-calender #calendar-box table td button,
+.row-calender #calendar-box table th button {
   position: static;
   width: 57.57px;
   height: 47.67px;
