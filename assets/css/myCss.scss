@@ -1629,6 +1629,10 @@ input.attribute_radio {
 }
 
 //booking-popup
+#modal-kalender{
+  display: none;
+}
+
 #booking-popup {
   position: fixed;
   z-index: 9999;
@@ -1677,13 +1681,13 @@ input.attribute_radio {
           font-size: larger;
         }
 
-        .btn-cencel,
+        .btn-cancel,
         .btn-next,
         .btn-back {
           width: 120px;
         }
 
-        .btn-cencel,
+        .btn-cancel,
         .btn-back {
           background: transparent;
           border: 2px solid var(--clr-blue-star-command);

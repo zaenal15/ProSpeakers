@@ -19,10 +19,30 @@
   <section id="main-content">
     <!-- nav-content -->
     <section id="navbar">
-      <section id="nav-right">
-       <a href=""> <i class="icofont-gear-alt"></i></a>
-       <a href=""> <i class="icofont-ui-user"></i></a>
-       <a href="../../index.html"> <i class="icofont-logout"></i></a>
+      <section id="nav-left-dashboard">
+        <div class="nav-title">
+          <h3>Dashboard</h3>
+        </div>
+      </section>
+
+      <section id="nav-right-dashboard">
+        <section class="nav-right">
+          <div>
+            <div class="nr-li" id="nr_main">
+             <img src="../../assets/img/icon/user-icon.svg" alt="profile_img">
+             <i class="icofont-caret-down"></i>
+              <div class="main-menu-nr">
+                <div class="content-menu-nr">
+                  <div class="list-content-nr">
+                    <li><i class='bx bxs-home' ></i>Home</li>
+                    <li><i class="icofont-gear-alt"></i>Setting</li>
+                    <li><i class="icofont-logout"></i>Logout</li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </section>
     </section>
     <!-- end nav content -->
@@ -30,194 +50,56 @@
     <!-- dashboard content  -->
     <section id="dashboard-content">
       <!-- dasboard-section -->
-      <section id="content-wrap-dashboard">
-        <section id="chart-dashboard" class="card-box">
-          <!-- chart jumlah pengunjung -->
-          <section id="pegunjuung">
-            <div class="card-header">
-              <h4>Jumlah Pengunjung</h4>
-            </div>
-            <div class="card-body">
-              <div class="row-chart" style="width: 450px; ">
-                 <canvas id="areaChart_2"></canvas>
-              </div>
-            </div>
-          </section>
-
-          <!-- chart total kategori -->
-          <section id="kategori">
-            <section id="chart-kategori" class="row-chart" style="width: 200px;">
-              <canvas id="doughnut_chart"></canvas>
-            </section>
-            <section id="point-chart">
-              <h4>
-                Total Kategori
-              </h4>
-              <ul>
-                <li>
-                  <i class='bx bxs-circle'></i>
-                  Soft Skil
-                </li>
-                <li>
-                  <i class='bx bxs-circle'></i>
-                  Strategy & Operations
-                </li>
-                <li>
-                  <i class='bx bxs-circle'></i>
-                  Human Resources
-                </li>
-                <li>
-                  <i class='bx bxs-circle'></i>
-                  Teknologi
-                </li>
-                <li>
-                  <i class='bx bxs-circle'></i>
-                  Sosial
-                </li>
-                <li>
-                  <i class='bx bxs-circle'></i>
-                  Marketing
-                </li>
-              </ul>
-            </section>
-          </section>
-        </section>
-        
-        <!-- total trainer -->
-        <section id="content-wrap-trainer" class="card-box">
-          <section id="ket-trainer">
-            <div class="ket-total">
-              <span>Total Trainer</span>
-              <h2>19</h2>
-            </div>
-            <div class="icon-total">
-              <img src="../../assets/img/icon/trainer.svg" alt="">
-            </div>
-          </section>
-        </section>
-        
-        <!-- total kelas -->
-        <section id="content-wrap-kelas" class="card-box">
-          <section id="ket-kelas">
-            <div class="ket-total">
-              <span>Total Kelas</span>
-              <h2>23</h2>
-            </div>
-            <div class="icon-total">
-              <img src="../../assets/img/icon/kelas.svg" alt="">
-            </div>
-          </section>
-        </section>
-
-        <!-- kelas populer -->
-        <section id="content-wrap-list" class="card-box">
-          <section id="kelas-populer">
-            <div id="title-kelas-populer">
-              <h4>Kelas Populer</h4>
-            </div>
-
-            <section id="content-card-kelas">
-              <section id="kelas-marketing" class="card-kelas">
-                <a href=""><img class="img-kelas" src="../../assets/img/categori/marketing.jpg" alt=""></a>
-                <div class="ket-kelas">
-                  <a href=""><h4 class="title-ket-kelas">MARKETING INTELLIGENCE for Company Growth</h4></a>
-                  <span>Marketing</span>
-                </div>
-                <div class="total-mengikuti">
-                  <p>150</p>
-                  <span>Mengikuti</span>
-                </div>
-              </section>
-
-              <section id="kelas-digital" class="card-kelas">
-                <a href=""><img class="img-kelas" src="../../assets/img/categori/teknologi.jpg" alt=""></a>
-                <div class="ket-kelas">
-                  <a href=""><h4 class="title-ket-kelas">Digital Leadership</h4></a>
-                  <span>Teknologi</span>
-                </div>
-                <div class="total-mengikuti">
-                  <p>110</p>
-                  <span>Mengikuti</span>
-                </div>
-              </section>
-
-              <section id="kelas-hr" class="card-kelas">
-                <a href=""><img class="img-kelas" src="../../assets/img/categori/hr.jpg" alt=""></a>
-                <div class="ket-kelas">
-                  <a href=""><h4 class="title-ket-kelas">Certified Recruitment and Selection Professional (BNSP)</h4></a>
-                  <span>Human Resources</span>
-                </div>
-                <div class="total-mengikuti">
-                  <p>100</p>
-                  <span>Mengikuti</span>
-                </div>
-              </section>
-
-              <section id="kelas-strategy" class="card-kelas">
-                <a href=""><img class="img-kelas" src="../../assets/img/categori/strategy.jpg" alt=""></a>
-                <div class="ket-kelas">
-                  <a href=""><h4 class="title-ket-kelas">ANALYTICAL & CREATIVE THINKING SKILL</h4></a>
-                  <span>Strategy</span>
-                </div>
-                <div class="total-mengikuti">
-                  <p>96</p>
-                  <span>Mengikuti</span>
-                </div>
-              </section>
-
-              <section id="kelas-soft-skill" class="card-kelas">
-                <a href=""><img class="img-kelas" src="../../assets/img/categori/leader.jpg" alt=""></a>
-                <div class="ket-kelas">
-                  <a href=""><h4 class="title-ket-kelas">Agile & Creative Thinking for Leader in Hybrid World</h4></a>
-                  <span>Soft Skill</span>
-                </div>
-                <div class="total-mengikuti">
-                  <p>90</p>
-                  <span>Mengikuti</span>
-                </div>
-              </section>
-              
-            </section>
-          </section>
-        </section><!-- end kelas populer -->
-      </section><!-- end dasboard section  -->
+      
     </section><!-- end dashboard content -->
 
     <!-- sidebar content -->
     <section id="sidebar">
-      <section id="sidebar-img">
-       <img src="../../assets/img/doit.png" alt="">
-      </section>
+      <section id="content-wrap-sidebar">
+        <section id="sidebar-img">
+         <img src="../../assets/img/logo-prospeakers.png" alt="">
+        </section>
+        
+        <section id="main-content-sidebar">
+          
+          <section id="sidebar-profile">
+            <img src="../../assets/img/speaker/arnold-schwarzenegger.jpg" alt="">
+            <div>
+              <h2>Arnold Schwarzenegger</h2>
+              <p>Speakers</p>
+            </div>
+          </section>
+    
+          <section id="sidebar-menu">
+            <ul>
+              <li id="dashboard-menu" class="active">
+                <a href="">
+                  <i class='bx bxs-calendar'></i>
+                  <p>Jadwal</p>
+                </a>
+              </li>
+              <li id="kategori-menu">
+                <a href="">
+                  <i class='bx bx-line-chart'></i>
+                  <p>Booking Info</p>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class='bx bxs-user-detail' ></i>
+                  <p>Profil</p>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class='bx bxs-comment-detail'></i>
+                  <p>Testimonials</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
 
-      <section id="sidebar-profile">
-        <img src="../../assets/img/categori/leader.jpg" alt="">
-        <div>
-          <h2>Joko</h2>
-          <p>Administrator</p>
-        </div>
-      </section>
-
-      <section id="sidebar-menu">
-        <ul>
-          <li id="dashboard-menu" class="active">
-            <a href="">
-              <i class='bx bxs-dashboard' ></i>
-              <p>Dashboard</p>
-            </a>
-          </li>
-          <li id="kategori-menu">
-            <a href="../dashboard-administrator/kategori.html">
-              <i class='bx bxs-book' ></i>
-              <p>Kategori</p>
-            </a>
-          </li>
-          <li>
-            <a href="">
-              <i class="icofont-users-alt-5"></i>
-              <p>Speaker</p>
-            </a>
-          </li>
-        </ul>
       </section>
     </section><!-- end sidebar content -->
   </section> 

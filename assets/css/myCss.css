@@ -1895,6 +1895,10 @@ input.attribute_radio:checked + label {
   background: var(--clr-blue-honolulu);
 }
 
+#modal-kalender {
+  display: none;
+}
+
 #booking-popup {
   position: fixed;
   z-index: 9999;
@@ -1958,13 +1962,13 @@ input.attribute_radio:checked + label {
   font-size: larger;
 }
 
-#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cencel,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cancel,
 #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-next,
 #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-back {
   width: 120px;
 }
 
-#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cencel,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cancel,
 #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-back {
   background: transparent;
   border: 2px solid var(--clr-blue-star-command);
@@ -1973,7 +1977,7 @@ input.attribute_radio:checked + label {
   transition: 0.3s;
 }
 
-#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cencel:hover,
+#booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-cancel:hover,
 #booking-popup #modal-calender-row .card-modal-calender .modal-content .btn-back:hover {
   background: var(--clr-blue-star-command);
   color: var(--clr-wht-basic);

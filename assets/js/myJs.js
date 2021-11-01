@@ -217,7 +217,8 @@ jQuery(document).ready(function($)
       maxSlides: 5,
       controls: false,
     });
-    
+
+//search
 $('#search').click(function() {
   $('.search-popup').show();
   $('.search-bg').click(function() {
