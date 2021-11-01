@@ -1471,6 +1471,7 @@ body {
       flex-direction: column;
 
       .booking-menu {
+        cursor: pointer;
         align-items: center;
         justify-content: center;
         display: flex;
@@ -1629,7 +1630,7 @@ input.attribute_radio {
 }
 
 //booking-popup
-#modal-kalender{
+#modal-kalender {
   display: none;
 }
 
@@ -1806,7 +1807,6 @@ input.attribute_radio {
         }
 
         #card-modal-content2 {
-          display: none !important;
           display: grid;
           padding: 3rem;
           grid-template-rows: 1.7fr auto;
@@ -1923,7 +1923,6 @@ input.attribute_radio {
 }
 
 //kalender
-
 .row-calender {
   display: grid;
   gap: 3rem;

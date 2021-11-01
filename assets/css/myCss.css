@@ -1715,6 +1715,7 @@ body .checkbox :checked ~ .checkmark {
 }
 
 .row-card .content .card-menu .booking-menu {
+  cursor: pointer;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2125,7 +2126,6 @@ input.attribute_radio:checked + label {
 }
 
 #booking-popup #modal-calender-row .card-modal-calender .modal-content #card-modal-content2 {
-  display: none !important;
   display: -ms-grid;
   display: grid;
   padding: 3rem;

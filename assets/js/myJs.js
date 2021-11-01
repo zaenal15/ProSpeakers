@@ -51,6 +51,33 @@ function createCalendar(parent, fullDateCalendar) {
 
 }
 
+$(document).ready(function(){
+  //modal - pop up calendar -- hide --show
+  $('.booking-menu').click(function(){
+  $('#modal-kalender').show();
+  $('#card-modal-content2').hide();
+  })
+
+  $('#closeButton').click(function(){
+    $('#modal-kalender').hide();
+  })
+
+  $('#nextButton').click(function(){
+    $('#card-modal-content1').hide();
+    $('#card-modal-content2').show();
+    $('#opsi-eo-show').hide();
+  })
+
+  $('#backButton').click(function(){
+    $('#card-modal-content1').show();
+    $('#card-modal-content2').hide();
+  })
+
+  $('#content-show-eo').click(function(){
+    $('#opsi-eo-show').show();
+  })
+})
+
 function padTwo(n) {
   if(n.toString().length == 1) n = ("0" + n)
   return n
