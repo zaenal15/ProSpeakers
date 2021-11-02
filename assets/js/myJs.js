@@ -74,8 +74,22 @@ $(document).ready(function(){
   })
 
   $('#content-show-eo').click(function(){
-    $('#opsi-eo-show').show();
-  })
+    if($('#opsi-eo-show').is(":checked")) {
+      $('#opsi-eo-show').show();
+    }
+    else if($('#opsi-eo-show').is(":not(:checked)")) {
+      $('#opsi-eo-show').hide();
+    }
+  });
+  // Contoh Yang atas
+  // $('input[type="checkbox"]').click(function() {
+  //   if($(this).is(":checked")) {
+  //     $('#header-filter a').show();
+  //   }
+  //   else if($(this).is(":not(:checked)")) {
+  //     $('#header-filter a').hide();
+  //   }
+  // });
 })
 
 function padTwo(n) {
