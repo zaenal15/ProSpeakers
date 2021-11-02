@@ -1474,7 +1474,6 @@ body .checkbox :checked ~ .checkmark {
 
 #profile-speaker #profile-speaker-content #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .info-speaker-top .jenis-speaker {
   font-size: medium;
-  color: var(--clr-blue-star-command);
   font-weight: 700;
   padding: 4px;
   line-height: 17px;
@@ -1898,6 +1897,10 @@ input.attribute_radio:checked + label {
 
 #modal-kalender {
   display: none;
+}
+
+.unset {
+  display: unset;
 }
 
 #booking-popup {

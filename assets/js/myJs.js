@@ -253,6 +253,12 @@ $('#search').click(function() {
   });
 });
 
+$(document).ready(function(){
+  $('.booking-menu').click(function(){
+    $('#modal-kalender').show()
+  })
+});
+
 //popular topic//
 const next=document.querySelector('#next')
 const prev=document.querySelector('#prev')

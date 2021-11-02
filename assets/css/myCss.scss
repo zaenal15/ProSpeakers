@@ -1270,7 +1270,6 @@ body {
 
                 .jenis-speaker {
                   font-size: medium;
-                  color: var(--clr-blue-star-command);
                   font-weight: 700;
                   padding: 4px;
                   line-height: 17px;
@@ -1632,6 +1631,9 @@ input.attribute_radio {
 //booking-popup
 #modal-kalender {
   display: none;
+}
+.unset{
+  display: unset;
 }
 
 #booking-popup {
