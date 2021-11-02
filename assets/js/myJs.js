@@ -76,6 +76,8 @@ $(document).ready(function(){
   $('#content-show-eo').click(function(){
     $('#opsi-eo-show').show();
   })
+
+  $('')
 })
 
 function padTwo(n) {
