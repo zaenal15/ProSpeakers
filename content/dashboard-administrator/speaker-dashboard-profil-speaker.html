@@ -189,61 +189,175 @@
         </section>
 
         <section id="show-edit-profil">
-          <section id="edit-profil-form">
+          <div class="header-edit-profil">
             <h3>Profil Speaker</h3>
+            <div class="btn-edit-profil">
+              <button id="cancel-edit-profil">Cancel</button>
+              <button id="save-edit-profil">Save</button>
+            </div>
+          </div>
+          <section id="edit-profil-form">
             <section id="profil-card-1" class="card">
-              <div class="row-form">
-                <label class="form-title" for="">Nama Lengkap</label>
-                <input class="form" type="text" placeholder="Nama Lengkap">
-              </div>
-              <div class="row-form">
-                <label class="form-title" for="">Title Deskripsi</label>
-                <input class="form" type="text" placeholder="Title Deskripsi">
-              </div>
-              <div class="row-form">
-                <label class="form-title" for="">Gender</label>
-                <div>
-                  <input name="gender" type="radio" value="pria" checked>
-                  <label for="">Pria</label>
+              <section class="row-content-card">
+                <div class="row-form">
+                  <label class="form-title" for="">Nama Lengkap</label>
+                  <input class="form" type="text" placeholder="Nama Lengkap">
                 </div>
-                <div>
-                  <input name="gender" type="radio" value="wanita">
-                  <label for="">Wanita</label>
+
+                <div class="row-form">
+                  <label class="form-title" for="">Title Deskripsi</label>
+                  <input class="form" type="text" placeholder="Title Deskripsi">
                 </div>
-              </div>
-              <div class="row-form">
-                <label class="form-title" for="">Type Speaker</label>
-                <select class="input-select"name="" id="">
-                  <option value="">Pilih</option>
-                  <option value="">Nasional</option>
-                  <option value="">Internasional</option>
-                </select>
-              </div>
-              <div class="row-form">
-                <label class="form-title" for="">Negara</label>
-                <select class="input-select"name="" id="">
-                  <option value="">Pilih</option>
-                  <option value="">United States</option>
-                  <option value="">Indonesia</option>
-                </select>
-              </div>
-              <div class="row-form">
-                <label class="form-title" for="">Kota</label>
-                <input class="form" type="text" placeholder="Kota">
-              </div>
-              <div class="row-form">
-                <label class="form-title" for="">Budget</label>
-                <select class="input-select"name="" id="">
-                  <option value="">Pilih</option>
-                  <option value="">Contact</option>
-                  <option value="">5-10 juta</option>
-                  <option value="">10-20 juta</option>
-                  <option value="">20-30 juta</option>
-                  <option value="">30-50 juta</option>
-                  <option value="">50-100 juta</option>
-                  <option value="">Di atas 100 juta</option>
-                </select>
-              </div>
+
+                <div class="row-form">
+                  <label class="form-title" for="">Gender</label>
+                  <div>
+                    <input name="gender" type="radio" value="pria" checked>
+                    <label for="">Pria</label>
+                  </div>
+                  <div>
+                    <input name="gender" type="radio" value="wanita">
+                    <label for="">Wanita</label>
+                  </div>
+                </div>
+
+                <div class="row-form">
+                  <label class="form-title" for="">Type Speaker</label>
+                  <select class="input-select"name="" id="">
+                    <option value="">Pilih</option>
+                    <option value="">Nasional</option>
+                    <option value="">Internasional</option>
+                  </select>
+                </div>
+
+                <div class="row-form">
+                  <label class="form-title" for="">Negara</label>
+                  <select class="input-select"name="" id="">
+                    <option value="">Pilih</option>
+                    <option value="">United States</option>
+                    <option value="">Indonesia</option>
+                  </select>
+                </div>
+
+                <div class="row-form">
+                  <label class="form-title" for="">Kota</label>
+                  <input class="form" type="text" placeholder="Kota">
+                </div>
+
+                <div class="row-form">
+                  <label class="form-title" for="">Budget</label>
+                  <select class="input-select"name="" id="">
+                    <option value="">Pilih</option>
+                    <option value="">Contact</option>
+                    <option value="">5-10 juta</option>
+                    <option value="">10-20 juta</option>
+                    <option value="">20-30 juta</option>
+                    <option value="">30-50 juta</option>
+                    <option value="">50-100 juta</option>
+                    <option value="">Di atas 100 juta</option>
+                  </select>
+                </div>
+              </section>
+            </section>
+
+            <section id="profil-card-2" class="card">
+              <section class="row-content-card">
+                <div class="row-form">
+                  <label class="form-title" for="">Posisi saat ini</label>
+                  <input class="form" type="text" placeholder="Posisi saat ini">
+                </div>
+
+                <div class="row-form">
+                  <label class="form-title" for="">Social Medial</label>
+                  <div class="form-sosmed">
+                    <label class="sosmed-title-form" for="">Facebook</label>
+                    <input class="form" type="url" placeholder="http://...">
+                  </div>
+
+                  <div class="form-sosmed"> 
+                    <label class="sosmed-title-form" for="">Instagram</label>
+                    <input class="form" type="url" placeholder="http://...">
+                  </div>
+
+                  <div class="form-sosmed">
+                    <label class="sosmed-title-form" for="">Linkedin</label>
+                    <input class="form" type="url" placeholder="http://...">
+                  </div>
+                </div>
+
+                <div class="row-form">
+                  <label class="form-title" for="">Topic</label>
+                  <ul class="topic-content-form">
+                    <li>
+                      <div class="radio">
+                          <input type="checkbox" class="attribute_radio" id="topic-1" value="offline" name="topic-1" checked/>
+                          <label for="topic-1">Leadership</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                          <input type="checkbox" class="attribute_radio" id="topic-2" value="online" name="topic-2" checked/>
+                          <label for="topic-2">Digital Transformation</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                          <input type="checkbox" class="attribute_radio" id="topic-3" value="semiHeybrid" name="topic-3"/>
+                          <label for="topic-3">Soft Skill</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                          <input type="checkbox" class="attribute_radio" id="topic-4" value="fullHeybrid" name="topic-4"/>
+                          <label for="topic-4">Sales & Marketing</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                          <input type="checkbox" class="attribute_radio" id="topic-5" value="fullHeybrid" name="topic-5"/>
+                          <label for="topic-5">Technology</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                          <input type="checkbox" class="attribute_radio" id="topic-6" value="fullHeybrid" name="topic-6"/>
+                          <label for="topic-6">Motivation</label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="radio">
+                          <input type="checkbox" class="attribute_radio" id="topic-7" value="fullHeybrid" name="topic-7"/>
+                          <label for="topic-7">Business & Strategy</label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </section>
+
+            <section id="profil-card-3" class="card">
+              <section class="row-content-card">
+                <div class="row-form">
+                  <label class="form-title" for="">BIO</label>
+                  <textarea class="textarea-input" name="" id="" cols="30" rows="4" placeholder="BIO"></textarea>
+                </div>
+              </section>
+            </section>
+
+            <section id="profil-card-4" class="card">
+              <section class="row-content-card">
+                <div class="row-form">
+                  <label class="form-title" for="">PRESTASI</label>
+                </div>
+              </section>
+            </section>
+
+            <section id="profil-card-5" class="card">
+              <section class="row-content-card">
+                <div class="row-form">
+                  <label class="form-title" for="">BUKU & ARTIKEL</label>
+                </div>
+              </section>
             </section>
           </section>
         </section>

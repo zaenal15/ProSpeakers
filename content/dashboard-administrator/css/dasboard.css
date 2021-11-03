@@ -62,6 +62,7 @@ body input[type="radio"] {
 }
 
 body input[type="radio"]:checked {
+  border: unset;
   background-color: var(--clr-wht-2);
   -webkit-box-shadow: inset 0 0 0 0.1875em var(--clr-blue-star-command);
           box-shadow: inset 0 0 0 0.1875em var(--clr-blue-star-command);
@@ -691,26 +692,75 @@ body .checkbox :checked ~ .checkmark {
   display: none;
 }
 
-#main-content #dashboard-content #content-wrap-profil-speaker #edit-profil-form {
-  display: -ms-grid;
-  display: grid;
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil .header-edit-profil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil .header-edit-profil .btn-edit-profil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 1rem;
 }
 
-#main-content #dashboard-content #content-wrap-profil-speaker #edit-profil-form h3 {
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil .header-edit-profil .btn-edit-profil button {
+  min-width: 100px;
+  font-size: medium;
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil .header-edit-profil .btn-edit-profil #save-edit-profil {
+  background: var(--clr-grn-malachite);
+  color: var(--clr-wht-basic);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil .header-edit-profil .btn-edit-profil #save-edit-profil:hover {
+  background: var(--clr-grn-malachite-2);
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil .header-edit-profil .btn-edit-profil #cancel-edit-profil {
+  background: transparent;
+  border: 2px solid var(--clr-blue-star-command);
+  color: var(--clr-blue-star-command);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil .header-edit-profil .btn-edit-profil #cancel-edit-profil:hover {
+  background: var(--clr-blue-star-command);
+  color: var(--clr-wht-basic);
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil h3 {
   font-size: large;
   color: var(--clr-blue-star-command);
 }
 
-#main-content #dashboard-content #content-wrap-profil-speaker #edit-profil-form input[type="text"] {
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form {
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form input[type="text"], #main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form input[type="url"] {
+  width: 60%;
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form select {
   width: 50%;
 }
 
-#main-content #dashboard-content #content-wrap-profil-speaker #edit-profil-form select {
-  width: 50%;
-}
-
-#main-content #dashboard-content #content-wrap-profil-speaker #edit-profil-form #profil-card-1 {
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form .row-content-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -721,7 +771,29 @@ body .checkbox :checked ~ .checkmark {
   gap: 2rem;
 }
 
-#main-content #dashboard-content #content-wrap-profil-speaker #edit-profil-form .form-title {
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form .row-content-card .form-sosmed {
+  display: -ms-grid;
+  display: grid;
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form .row-content-card .sosmed-title-form {
+  color: var(--clr-blue-star-command);
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form .row-content-card .topic-content-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1rem;
+  padding: 10px;
+  background: var(--clr-wht-2);
+  border-radius: 5px;
+  border: 1px solid var(--clr-wht-cultured);
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form .form-title {
   font-weight: 500;
 }
 
@@ -875,6 +947,23 @@ body .checkbox :checked ~ .checkmark {
   gap: 0.5rem;
 }
 
+#main-content input.attribute_radio {
+  display: none;
+}
+
+#main-content input.attribute_radio + label {
+  display: inline-block;
+  padding: 4px 12px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+#main-content input.attribute_radio:checked + label {
+  background: var(--clr-blue-azure);
+  color: var(--clr-blue-star-command);
+  border-color: var(--clr-blue-azure);
+}
+
 @media only screen and (max-device-width: 1024px) {
   #main-content {
     -ms-grid-columns: 1fr;
@@ -920,39 +1009,44 @@ body .checkbox :checked ~ .checkmark {
   #main-content #dashboard-content {
     padding-bottom: 5rem;
   }
-  #main-content #dashboard-content #content-wrap-dashboard {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-        grid-template-areas: 'chart' 'trainer ' 'kelas' 'list';
-  }
-  #main-content #dashboard-content #content-wrap-dashboard #chart-dashboard #pegunjuung *::-webkit-scrollbar {
-    display: none;
-  }
-  #main-content #dashboard-content #content-wrap-dashboard #chart-dashboard #pegunjuung .card-body {
-    overflow: auto;
-  }
-  #main-content #dashboard-content #content-wrap-dashboard #chart-dashboard #kategori {
+  #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-1 .profile-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker {
     gap: 2rem;
   }
-  #main-content #dashboard-content #content-wrap-dashboard #content-wrap-trainer {
-    height: 117px;
-    background-position: bottom;
+  #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .info-speaker-top .name-speaker h3 {
+    font-size: large;
   }
-  #main-content #dashboard-content #content-wrap-dashboard #content-wrap-kelas {
-    height: 117px;
-    background-position: bottom;
+  #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .btn-profil-speaker {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
   }
-  #main-content #dashboard-content #content-wrap-dashboard #content-wrap-list #kelas-populer #content-card-kelas .card-kelas .img-kelas {
-    display: none !important;
+  #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .btn-profil-speaker .contact-speaker {
+    width: 50%;
   }
-  #main-content #dashboard-content #content-wrap-dashboard #content-wrap-list #kelas-populer #content-card-kelas .card-kelas .total-mengikuti {
-    padding: 10px;
+  #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-1 .profile-info .info-speaker .btn-profil-speaker .booking-info {
+    width: 50%;
+  }
+  #main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form input[type="text"], #main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form input[type="url"] {
+    width: unset;
+  }
+  #main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form select {
+    width: unset;
   }
 }
 /*# sourceMappingURL=dasboard.css.map */

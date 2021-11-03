@@ -1,5 +1,3 @@
-
-
 //calender
 $(document).ready(function() {
   parent = $('#calendar-box')
@@ -105,22 +103,27 @@ $('#nr_main').on('click', function(){
 
 //srolUp
 $(document).ready(function(){ 
-    $(window).scroll(function(){ 
-      if ($(this).scrollTop() > 100) { 
-        $('#scroll').fadeIn(); 
-      } else { 
-        $('#scroll').fadeOut(); 
-      } 
-    }); 
-    $('#scroll').click(function(){ 
-      $("html, body").animate({ scrollTop: 0 }, 600); 
-      return false; 
-    }); 
-  });
-  
+  $(window).scroll(function(){ 
+    if ($(this).scrollTop() > 100) { 
+      $('#scroll').fadeIn(); 
+    } else { 
+      $('#scroll').fadeOut(); 
+    } 
+  }); 
+  $('#scroll').click(function(){ 
+    $("html, body").animate({ scrollTop: 0 }, 600); 
+    return false; 
+  }); 
+});
+
+//edit profile
 $('.edit-profil').click(function(){
   $('#show-edit-profil').show();
   $('#row-profile-speaker').hide();
+});
+$('#cancel-edit-profil').click(function(){
+  $('#show-edit-profil').hide();
+  $('#row-profile-speaker').show();
 });
 
 //filter speaker
