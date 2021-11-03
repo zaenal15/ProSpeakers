@@ -106,18 +106,22 @@ $('#nr_main').on('click', function(){
 //srolUp
 $(document).ready(function(){ 
     $(window).scroll(function(){ 
-        if ($(this).scrollTop() > 100) { 
-            $('#scroll').fadeIn(); 
-        } else { 
-            $('#scroll').fadeOut(); 
-        } 
+      if ($(this).scrollTop() > 100) { 
+        $('#scroll').fadeIn(); 
+      } else { 
+        $('#scroll').fadeOut(); 
+      } 
     }); 
     $('#scroll').click(function(){ 
-        $("html, body").animate({ scrollTop: 0 }, 600); 
-        return false; 
+      $("html, body").animate({ scrollTop: 0 }, 600); 
+      return false; 
     }); 
+  });
+  
+$('.edit-profil').click(function(){
+  $('#show-edit-profil').show();
+  $('#row-profile-speaker').hide();
 });
-
 
 //filter speaker
 $('#openFilter').on('click', function(){
@@ -267,11 +271,15 @@ $('#search').click(function() {
   });
 });
 
+
 $(document).ready(function(){
+  $('#edit-profil-form').hide()
   $('.booking-menu').click(function(){
     $('#modal-kalender').show()
   })
 });
+
+//kalender
 
 //popular topic//
 const next=document.querySelector('#next')
