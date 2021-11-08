@@ -49,6 +49,7 @@
 
     <!-- dashboard content  -->
     <section id="dashboard-content">
+      <!-- profil dashboard speaker -->
       <section id="content-wrap-profil-speaker">
         <section id="row-profile-speaker">
           <section id="ket-profile">
@@ -106,53 +107,56 @@
                 <span>BIO</span>
                 <div class="about-content-speaker">
                   <p>This world-famous athlete and actor was born in Thal, Austria in 1947, and by the age of 20 was dominating the sport of competitive bodybuilding, becoming the youngest person ever to win the Mr. Universe title.
-                  <br><br>
-                  By generating a new international audience for bodybuilding, Schwarzenegger turned himself into a sports icon. With his sights set on Hollywood, he emigrated to America in 1968 and went on to win five Mr. Universe titles and seven Mr. Olympia titles before retiring to dedicate himself to acting.
-                  <br><br>
-                  Most notably, Schwarzenegger made California a world leader on renewable energy and combating climate change with the Global Warming Solutions Act of 2006, set a revolutionary political reform agenda, and became the first governor in decades to invest in rebuilding California's critical infrastructure with his Strategic Growth Plan. He also dedicated himself to promoting physical education and after-school programs, and continues to commit his time, energy and personal finances to charitable organizations around the world.</p>
-                </div>
-              </section>
-
-              <section id="prestasi-speaker" class="about-speaker card">
-                <span>PRESTASI</span>
-                <div class="about-content-speaker">
-                 <div>
-                   <strong><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, sapiente!</p></strong>
-                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam rerum, doloribus omnis nihil incidunt impedit magni! Hic sapiente esse dolorum.</p>
-                 </div>
-                </div>
+                    <br><br>
+                    By generating a new international audience for bodybuilding, Schwarzenegger turned himself into a sports icon. With his sights set on Hollywood, he emigrated to America in 1968 and went on to win five Mr. Universe titles and seven Mr. Olympia titles before retiring to dedicate himself to acting.
+                    <br><br>
+                    Most notably, Schwarzenegger made California a world leader on renewable energy and combating climate change with the Global Warming Solutions Act of 2006, set a revolutionary political reform agenda, and became the first governor in decades to invest in rebuilding California's critical infrastructure with his Strategic Growth Plan. He also dedicated himself to promoting physical education and after-school programs, and continues to commit his time, energy and personal finances to charitable organizations around the world.</p>
+                  </div>
+                </section>
+                
+                <section id="prestasi-speaker" class="about-speaker card">
+                  <span>PRESTASI</span>
+                  <div id="row-prestasi-content" class="about-content-speaker">
+                    <div class="prestasi-content">
+                      <div class="ket-prestasi">
+                        <strong><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, sapiente!</p></strong>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam rerum, doloribus omnis nihil incidunt impedit magni! Hic sapiente esse dolorum.</p>
+                      </div>
+                    </div>
+                  </div>
               </section>
 
               <section id="book-artikel" class="about-speaker card">
-                <span>BUKU & ARTIKEL</span>
+                <span>BUKU</span>
                 <div id="book-artikel-content" class="about-content-speaker">
                   <div class="card-book-artikel">
-                   <div class="img-book-artikel">
-                     <img src="../../assets/img/book.jpg" alt="">
-                   </div>
-                   <div class="des-book-artikel">
-                     <strong><p>Lorem ipsum dolor sit amet.</p></strong>
-                     <p>Lorem, ipsum dolor.</p>
-                   </div>
+                    <div class="img-book-artikel">
+                      <img src="../../assets/img/book.jpg" alt="">
+                    </div>
+                    <div class="des-book-artikel">
+                      <strong><p>Lorem ipsum dolor sit amet.</p></strong>
+                      <p>Lorem, ipsum dolor.</p>
+                    </div>
                   </div>
+
                   <div class="card-book-artikel">
-                   <div class="img-book-artikel">
-                     <img src="../../assets/img/book.jpg" alt="">
-                   </div>
-                   <div class="des-book-artikel">
-                     <strong><p>Lorem ipsum dolor sit amet.</p></strong>
-                     <p>Lorem, ipsum dolor.</p>
-                   </div>
+                    <div class="img-book-artikel">
+                      <img src="../../assets/img/book.jpg" alt="">
+                    </div>
+                    <div class="des-book-artikel">
+                      <strong><p>Lorem ipsum dolor sit amet.</p></strong>
+                      <p>Lorem, ipsum dolor.</p>
+                    </div>
                   </div>
+
                   <div class="card-book-artikel">
-                   <div class="img-book-artikel">
-                     <img src="../../assets/img/book.jpg" alt="">
-                   </div>
-                   <div class="des-book-artikel">
-                     <strong><p>Lorem ipsum dolor sit amet.</p></strong>
-                     <p>Lorem, ipsum dolor.</p>
-                   </div>
-                  </div>
+                    <div class="img-book-artikel">
+                      <img src="../../assets/img/book.jpg" alt="">
+                    </div>
+                    <div class="des-book-artikel">
+                      <strong><p>Lorem ipsum dolor sit amet.</p></strong>
+                      <p>Lorem, ipsum dolor.</p>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -188,6 +192,7 @@
           </section>
         </section>
 
+        <!-- edit profile speaker -->
         <section id="show-edit-profil">
           <div class="header-edit-profil">
             <h3>Profil Speaker</h3>
@@ -199,6 +204,21 @@
           <section id="edit-profil-form">
             <section id="profil-card-1" class="card">
               <section class="row-content-card">
+                <div class="row-form">
+                  <div class="container">
+                    <div class="avatar-upload">
+                      <div class="avatar-edit">
+                        <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                        <label class="icon-uplod-img" for="imageUpload"><i class='bx bxs-camera'></i></label>
+                      </div>
+                      <div class="avatar-preview">
+                        <div id="imagePreview">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <div class="row-form">
                   <label class="form-title" for="">Nama Lengkap</label>
                   <input class="form" type="text" placeholder="Nama Lengkap">
@@ -238,12 +258,12 @@
                     <option value="">Indonesia</option>
                   </select>
                 </div>
-
+                
                 <div class="row-form">
                   <label class="form-title" for="">Kota</label>
                   <input class="form" type="text" placeholder="Kota">
                 </div>
-
+                
                 <div class="row-form">
                   <label class="form-title" for="">Budget</label>
                   <select class="input-select"name="" id="">
@@ -343,11 +363,26 @@
                 </div>
               </section>
             </section>
-
+            
             <section id="profil-card-4" class="card">
               <section class="row-content-card">
                 <div class="row-form">
-                  <label class="form-title" for="">PRESTASI</label>
+                  <div class="header-title-prestasi">
+                    <label class="form-title" for="">PRESTASI</label>
+                    <button id="btn-add-prestasi" class="btn-add-content">Tambah <i class="icofont-ui-edit"></i></button>
+                  </div>
+                  <div id="row-prestasi-content" class="about-content-speaker">
+                    <div class="prestasi-content">
+                      <div class="ket-prestasi">
+                        <strong><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, sapiente!</p></strong>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam rerum, doloribus omnis nihil incidunt impedit magni! Hic sapiente esse dolorum.</p>
+                      </div>
+
+                      <div class="row-btn-delete">
+                        <button class="btn-delete"><i class="icofont-bin"></i></button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </section>
             </section>
@@ -355,7 +390,25 @@
             <section id="profil-card-5" class="card">
               <section class="row-content-card">
                 <div class="row-form">
-                  <label class="form-title" for="">BUKU & ARTIKEL</label>
+                  <div>
+                    <label class="form-title" for="">BUKU</label>
+                    <button id="btn-add-buku" class="btn-add-content">Tambah <i class="icofont-ui-edit"></i></button>
+                  </div>
+                  <div id="book-artikel-content" class="about-content-speaker">
+                    <div class="card-book-artikel">
+                      <div class="img-book-artikel">
+                        <img src="../../assets/img/book.jpg" alt="">
+                      </div>
+                      <div class="des-book-artikel">
+                        <strong><p>Lorem ipsum dolor sit amet.</p></strong>
+                        <p>Lorem, ipsum dolor.</p>
+                      </div>
+                      
+                      <div class="row-btn-delete">
+                        <button class="btn-delete"><i class="icofont-bin"></i></button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </section>
             </section>
