@@ -1,5 +1,3 @@
-
-
 //calender
 $(document).ready(function() {
   parent = $('#calendar-box')
@@ -163,19 +161,28 @@ function openModal(el) {
 
 //srolUp
 $(document).ready(function(){ 
-    $(window).scroll(function(){ 
-        if ($(this).scrollTop() > 100) { 
-            $('#scroll').fadeIn(); 
-        } else { 
-            $('#scroll').fadeOut(); 
-        } 
-    }); 
-    $('#scroll').click(function(){ 
-        $("html, body").animate({ scrollTop: 0 }, 600); 
-        return false; 
-    }); 
+  $(window).scroll(function(){ 
+    if ($(this).scrollTop() > 100) { 
+      $('#scroll').fadeIn(); 
+    } else { 
+      $('#scroll').fadeOut(); 
+    } 
+  }); 
+  $('#scroll').click(function(){ 
+    $("html, body").animate({ scrollTop: 0 }, 600); 
+    return false; 
+  }); 
 });
 
+//edit profile
+$('.edit-profil').click(function(){
+  $('#show-edit-profil').show();
+  $('#row-profile-speaker').hide();
+});
+$('#cancel-edit-profil').click(function(){
+  $('#show-edit-profil').hide();
+  $('#row-profile-speaker').show();
+});
 
 //filter speaker
 $('#openFilter').on('click', function(){
@@ -187,6 +194,22 @@ $('#closeFilter').on('click', function(){
   $('#filter-speaker').hide();
   $('#openFilter').show();
   $('#closeFilter').hide();
+});
+
+function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function(e) {
+      $('#imagePreview').css('background-image', 'url('+e.target.result +')');
+      $('#imagePreview').hide();
+      $('#imagePreview').fadeIn(650);
+    }
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+$("#imageUpload").change(function() {
+    readURL(this);
 });
 
 //dasboard filter
@@ -325,11 +348,15 @@ $('#search').click(function() {
   });
 });
 
+
 $(document).ready(function(){
+  $('#edit-profil-form').hide()
   $('.booking-menu').click(function(){
     $('#modal-kalender').show()
   })
 });
+
+//kalender
 
 //popular topic//
 const next=document.querySelector('#next')
