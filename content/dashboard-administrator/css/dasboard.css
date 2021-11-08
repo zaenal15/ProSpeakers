@@ -8,14 +8,14 @@
   --clr-gry-dim: #696969;
   --clr-red-rosso-corsa: #E00B00;
   --clr-red-barn: #7A0600;
-  --clr-blue-azure: #E1F5FF;
-  --clr-blue-star-command: #0077B5;
-  --clr-blue-lapis-lazuli: #005D8F;
+  --clr-blue-azure:#E1F5FF;
+  --clr-blue-star-command:#0077B5;
+  --clr-blue-lapis-lazuli:#005D8F;
   --clr-blue-honolulu: #0068AF;
-  --clr-orng-bittersweet: #FF645C;
-  --clr-orng-tart: #FF3D33;
-  --clr-grn-malachite: #4CD964;
-  --clr-grn-malachite-2: #35D450;
+  --clr-orng-bittersweet:#FF645C;
+  --clr-orng-tart:#FF3D33;
+  --clr-grn-malachite:#4CD964;
+  --clr-grn-malachite-2:#35D450;
 }
 
 body {
@@ -326,207 +326,6 @@ body .checkbox :checked ~ .checkmark {
       grid-template-columns: 1fr;
 }
 
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 0.8fr 1fr;
-      grid-template-columns: 0.8fr 1fr;
-  gap: 1.2rem;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .row-calender {
-  display: -ms-grid;
-  display: grid;
-  gap: 3rem;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .row-calender .header-calender {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .row-calender #date {
-  width: 30px;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .row-calender input {
-  padding: 10px;
-  margin-bottom: auto;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: none;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .row-calender .content-kalender {
-  display: -ms-grid;
-  display: grid;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .row-calender .content-kalender .calendar-inportant {
-  width: 100%;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .row-calender #calendar-box {
-  display: -ms-grid;
-  display: grid;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .row-calender #calendar-box button {
-  background: transparent;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .row-calender #calendar-box .selected-date {
-  color: var(--clr-wht-basic) !important;
-  background-color: var(--clr-blue-honolulu);
-  border-radius: 8px;
-  position: static;
-  width: 100%;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .row-calender #calendar-box table th {
-  background-color: var(--clr-wht-basic);
-  width: 100%;
-  color: var(--clr-gry-dim);
-  text-align: center;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .row-calender #calendar-box table td button {
-  position: static;
-  border-radius: none;
-  border-style: none;
-  background-color: var(--clr-wht-basic);
-  color: var(--clr-gry-dim);
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .calendar-header {
-  background: var(--clr-blue-star-command);
-  min-height: 52px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .calendar-header span {
-  color: var(--clr-wht-basic);
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal #calender-booking-speakers {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: calender;
-  display: -ms-grid;
-  display: grid;
-  gap: 3rem;
-      grid-template-rows: 1.7fr auto;
-      grid-template-areas: "calender" "btn-calender";
-  color: var(--clr-wht-basic);
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal #calender-booking-speakers .calender-content {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: calender;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal #calender-booking-speakers .date-calender {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 5rem;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: btn-calender;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .content-jadwal-2 .card {
-  padding: 20px;
-  height: 80vh;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .content-jadwal-2 .header-jadwal-content {
-  font-size: medium;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .content-jadwal-2 .header-jadwal-content .row-list-content-jadwal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1rem;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 570px;
-  overflow: auto;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .content-jadwal-2 .header-jadwal-content .list-content-jadwal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-  border: 1px solid var(--clr-silver);
-  border-radius: 20px;
-  padding: 10px;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .content-jadwal-2 .header-jadwal-content .list-content-jadwal img {
-  display: block;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .content-jadwal-2 .header-jadwal-content .list-content-jadwal .des-list-content-jadwal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .content-jadwal-2 .header-jadwal-content .list-content-jadwal .status-jadwal-completed {
-  background-color: var(--clr-red-rosso-corsa);
-  border-radius: 3px;
-  color: var(--clr-wht-basic);
-  padding: 4px;
-  line-height: 17px;
-  margin-right: auto;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .content-jadwal-2 .header-jadwal-content .list-content-jadwal .status-jadwal-onschedule {
-  background-color: var(--clr-grn-malachite);
-  border-radius: 3px;
-  color: var(--clr-wht-basic);
-  padding: 4px;
-  line-height: 17px;
-  margin-right: auto;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal .header-jadwal-content {
-  display: -ms-grid;
-  display: grid;
-  gap: 1rem;
-}
-
-#main-content #dashboard-content #content-wrap-jadwal label {
-  font-size: medium;
-  font-weight: 500;
-}
-
 #main-content #dashboard-content #content-wrap-booking-info #list-booking-info {
   display: -ms-grid;
   display: grid;
@@ -562,8 +361,7 @@ body .checkbox :checked ~ .checkmark {
   padding-bottom: 12px;
 }
 
-#main-content #dashboard-content #content-wrap-booking-info #list-booking-info .card .header-booking-info .pemesan p,
-#main-content #dashboard-content #content-wrap-booking-info #list-booking-info .card .header-booking-info .date-booking p {
+#main-content #dashboard-content #content-wrap-booking-info #list-booking-info .card .header-booking-info .pemesan p, #main-content #dashboard-content #content-wrap-booking-info #list-booking-info .card .header-booking-info .date-booking p {
   padding: 4px;
   line-height: 17px;
   background-color: #E1F5FF;
@@ -626,6 +424,25 @@ body .checkbox :checked ~ .checkmark {
 
 #main-content #dashboard-content #content-wrap-booking-info #list-booking-info .card .bottom-booking-info #btn-approved:hover {
   background: var(--clr-grn-malachite-2);
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #popup-form-book {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+#main-content #dashboard-content #content-wrap-profil-speaker #popup-form-book .bg-poup-form-book {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.63);
 }
 
 #main-content #dashboard-content #content-wrap-profil-speaker #row-prestasi-content {
@@ -874,7 +691,7 @@ body .checkbox :checked ~ .checkmark {
   margin: auto;
 }
 
-#main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-2 .about-profile .expertise .point-expertise {
+#main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-2 .about-profile .expertise .point-expertise, #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-2 .about-profile .expertise .point-topic, #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-2 .about-profile .topic .point-expertise, #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-2 .about-profile .topic .point-topic {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -884,7 +701,7 @@ body .checkbox :checked ~ .checkmark {
   padding-top: 7px;
 }
 
-#main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-2 .about-profile .expertise .point-expertise p {
+#main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-2 .about-profile .expertise .point-expertise p, #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-2 .about-profile .expertise .point-topic p, #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-2 .about-profile .topic .point-expertise p, #main-content #dashboard-content #content-wrap-profil-speaker #row-profile-speaker #ket-profile #row-card-2 .about-profile .topic .point-topic p {
   background: var(--clr-blue-azure);
   padding: 3px;
   line-height: 17px;
@@ -1083,10 +900,6 @@ body .checkbox :checked ~ .checkmark {
   background: var(--clr-blue-lapis-lazuli);
 }
 
-#main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form .form-title {
-  font-weight: 500;
-}
-
 #main-content #sidebar {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -1226,6 +1039,10 @@ body .checkbox :checked ~ .checkmark {
   padding: 20px;
 }
 
+#main-content .form-title {
+  font-weight: 500;
+}
+
 #main-content .row-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1322,6 +1139,81 @@ body .checkbox :checked ~ .checkmark {
   background-position: center;
 }
 
+#main-content .section-content {
+  width: 80%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+#main-content #popup-form-book, #main-content #popup-form-prestasi {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.63);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-content #popup-form-book h2, #main-content #popup-form-prestasi h2 {
+  font-size: large;
+  color: var(--clr-blue-star-command);
+}
+
+#main-content #popup-form-book .section-content, #main-content #popup-form-prestasi .section-content {
+  width: 55%;
+}
+
+#main-content #popup-form-book #content-popup-form-book, #main-content #popup-form-book #content-popup-form-prestasi, #main-content #popup-form-prestasi #content-popup-form-book, #main-content #popup-form-prestasi #content-popup-form-prestasi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+#main-content #popup-form-book #content-popup-form-book .title-popup-form-book, #main-content #popup-form-book #content-popup-form-book .title-popup-form-prestasi, #main-content #popup-form-book #content-popup-form-prestasi .title-popup-form-book, #main-content #popup-form-book #content-popup-form-prestasi .title-popup-form-prestasi, #main-content #popup-form-prestasi #content-popup-form-book .title-popup-form-book, #main-content #popup-form-prestasi #content-popup-form-book .title-popup-form-prestasi, #main-content #popup-form-prestasi #content-popup-form-prestasi .title-popup-form-book, #main-content #popup-form-prestasi #content-popup-form-prestasi .title-popup-form-prestasi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#main-content #popup-form-book #content-popup-form-book .title-popup-form-book button, #main-content #popup-form-book #content-popup-form-book .title-popup-form-prestasi button, #main-content #popup-form-book #content-popup-form-prestasi .title-popup-form-book button, #main-content #popup-form-book #content-popup-form-prestasi .title-popup-form-prestasi button, #main-content #popup-form-prestasi #content-popup-form-book .title-popup-form-book button, #main-content #popup-form-prestasi #content-popup-form-book .title-popup-form-prestasi button, #main-content #popup-form-prestasi #content-popup-form-prestasi .title-popup-form-book button, #main-content #popup-form-prestasi #content-popup-form-prestasi .title-popup-form-prestasi button {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--clr-orng-bittersweet);
+  color: var(--clr-wht-basic);
+}
+
+#main-content #popup-form-book #content-popup-form-book .row-btn-save-book, #main-content #popup-form-book #content-popup-form-book .row-btn-save-prestasi, #main-content #popup-form-book #content-popup-form-prestasi .row-btn-save-book, #main-content #popup-form-book #content-popup-form-prestasi .row-btn-save-prestasi, #main-content #popup-form-prestasi #content-popup-form-book .row-btn-save-book, #main-content #popup-form-prestasi #content-popup-form-book .row-btn-save-prestasi, #main-content #popup-form-prestasi #content-popup-form-prestasi .row-btn-save-book, #main-content #popup-form-prestasi #content-popup-form-prestasi .row-btn-save-prestasi {
+  text-align: center;
+}
+
+#main-content #popup-form-book #content-popup-form-book .row-btn-save-book #btn-save-book, #main-content #popup-form-book #content-popup-form-book .row-btn-save-book #btn-save-prestasi, #main-content #popup-form-book #content-popup-form-book .row-btn-save-prestasi #btn-save-book, #main-content #popup-form-book #content-popup-form-book .row-btn-save-prestasi #btn-save-prestasi, #main-content #popup-form-book #content-popup-form-prestasi .row-btn-save-book #btn-save-book, #main-content #popup-form-book #content-popup-form-prestasi .row-btn-save-book #btn-save-prestasi, #main-content #popup-form-book #content-popup-form-prestasi .row-btn-save-prestasi #btn-save-book, #main-content #popup-form-book #content-popup-form-prestasi .row-btn-save-prestasi #btn-save-prestasi, #main-content #popup-form-prestasi #content-popup-form-book .row-btn-save-book #btn-save-book, #main-content #popup-form-prestasi #content-popup-form-book .row-btn-save-book #btn-save-prestasi, #main-content #popup-form-prestasi #content-popup-form-book .row-btn-save-prestasi #btn-save-book, #main-content #popup-form-prestasi #content-popup-form-book .row-btn-save-prestasi #btn-save-prestasi, #main-content #popup-form-prestasi #content-popup-form-prestasi .row-btn-save-book #btn-save-book, #main-content #popup-form-prestasi #content-popup-form-prestasi .row-btn-save-book #btn-save-prestasi, #main-content #popup-form-prestasi #content-popup-form-prestasi .row-btn-save-prestasi #btn-save-book, #main-content #popup-form-prestasi #content-popup-form-prestasi .row-btn-save-prestasi #btn-save-prestasi {
+  width: 150px;
+  font-size: medium;
+  background: var(--clr-blue-star-command);
+  color: var(--clr-wht-basic);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#main-content #popup-form-book #content-popup-form-book .row-btn-save-book #btn-save-book:hover, #main-content #popup-form-book #content-popup-form-book .row-btn-save-book #btn-save-prestasi:hover, #main-content #popup-form-book #content-popup-form-book .row-btn-save-prestasi #btn-save-book:hover, #main-content #popup-form-book #content-popup-form-book .row-btn-save-prestasi #btn-save-prestasi:hover, #main-content #popup-form-book #content-popup-form-prestasi .row-btn-save-book #btn-save-book:hover, #main-content #popup-form-book #content-popup-form-prestasi .row-btn-save-book #btn-save-prestasi:hover, #main-content #popup-form-book #content-popup-form-prestasi .row-btn-save-prestasi #btn-save-book:hover, #main-content #popup-form-book #content-popup-form-prestasi .row-btn-save-prestasi #btn-save-prestasi:hover, #main-content #popup-form-prestasi #content-popup-form-book .row-btn-save-book #btn-save-book:hover, #main-content #popup-form-prestasi #content-popup-form-book .row-btn-save-book #btn-save-prestasi:hover, #main-content #popup-form-prestasi #content-popup-form-book .row-btn-save-prestasi #btn-save-book:hover, #main-content #popup-form-prestasi #content-popup-form-book .row-btn-save-prestasi #btn-save-prestasi:hover, #main-content #popup-form-prestasi #content-popup-form-prestasi .row-btn-save-book #btn-save-book:hover, #main-content #popup-form-prestasi #content-popup-form-prestasi .row-btn-save-book #btn-save-prestasi:hover, #main-content #popup-form-prestasi #content-popup-form-prestasi .row-btn-save-prestasi #btn-save-book:hover, #main-content #popup-form-prestasi #content-popup-form-prestasi .row-btn-save-prestasi #btn-save-prestasi:hover {
+  background: var(--clr-blue-lapis-lazuli);
+}
+
 @media only screen and (max-device-width: 1024px) {
   #main-content {
     -ms-grid-columns: 1fr;
@@ -1405,6 +1297,9 @@ body .checkbox :checked ~ .checkmark {
   }
   #main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form select {
     width: unset;
+  }
+  #main-content #popup-form-book .section-content, #main-content #popup-form-prestasi .section-content {
+    width: 80%;
   }
 }
 /*# sourceMappingURL=dasboard.css.map */

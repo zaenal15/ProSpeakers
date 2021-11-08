@@ -174,7 +174,7 @@ $(document).ready(function(){
   }); 
 });
 
-//edit profile
+//edit profile show
 $('.edit-profil').click(function(){
   $('#show-edit-profil').show();
   $('#row-profile-speaker').hide();
@@ -184,18 +184,7 @@ $('#cancel-edit-profil').click(function(){
   $('#row-profile-speaker').show();
 });
 
-//filter speaker
-$('#openFilter').on('click', function(){
-  $('#filter-speaker').show();
-  $('#openFilter').hide();
-  $('#closeFilter').show();
-});
-$('#closeFilter').on('click', function(){
-  $('#filter-speaker').hide();
-  $('#openFilter').show();
-  $('#closeFilter').hide();
-});
-
+//upload foto profil
 function readURL(input) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
@@ -207,29 +196,34 @@ function readURL(input) {
     reader.readAsDataURL(input.files[0]);
   }
 }
-
 $("#imageUpload").change(function() {
     readURL(this);
+  });
+
+//popup content
+
+$(document).ready(function(){
+  $('.close-popup-btn').click(function(){
+    $('#popup-form-book').hide()
+    $('#popup-form-prestasi').hide()
+  })
+  
+  $('#popup-form-book').hide()
+  $('#btn-add-buku').click(function(){
+    $('#popup-form-book').show()
+  })
+
+  $('#popup-form-prestasi').hide()
+  $('#btn-add-prestasi').click(function(){
+    $('#popup-form-prestasi').show()
+  })
 });
 
-//dasboard filter
-$(document).ready(function(){
-  $('a#filter-a').click(function(){
-    //hide all works by default 
-     $(".view").addClass('filter-hide');
-     //show slected works based on the menu clicked
-     $(".view[data-filter='"+$(this).attr('data-filter')+"']").removeClass("filter-hide");
-     //remove selected class to the link      
-     $('a#filter-a').removeClass('selected');
-     //add selected class to the active link
-     $(this).addClass('selected');
-     return false;
-    });
-    //show all works for "all" menu
-    $('a[data-filter="*"]').click(function(event) {    
-      $(".view").removeClass('filter-hide');
-      return false;
-    });
+//filter speaker
+$('#closeFilter').on('click', function(){
+  $('#filter-speaker').hide();
+  $('#openFilter').show();
+  $('#closeFilter').hide();
 });
 
 // nav header mobile
@@ -348,15 +342,13 @@ $('#search').click(function() {
   });
 });
 
-
+//boking menu
 $(document).ready(function(){
   $('#edit-profil-form').hide()
   $('.booking-menu').click(function(){
     $('#modal-kalender').show()
   })
 });
-
-//kalender
 
 //popular topic//
 const next=document.querySelector('#next')
