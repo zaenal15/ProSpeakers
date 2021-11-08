@@ -2272,7 +2272,8 @@ input.attribute_radio:checked + label {
 .row-calender {
   display: -ms-grid;
   display: grid;
-  gap: 3rem;
+  height: 100%;
+  width: 100%;
 }
 
 .row-calender .header-calender {
@@ -2284,7 +2285,7 @@ input.attribute_radio:checked + label {
 }
 
 .row-calender #date {
-  width: 30px;
+  width: 100%;
 }
 
 .row-calender input {
@@ -2296,105 +2297,8 @@ input.attribute_radio:checked + label {
 }
 
 .row-calender .content-kalender {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.row-calender .tombol {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.row-calender #delAgenda {
-  background-color: var(--red);
-  padding: 10px 35px;
-  margin-bottom: auto;
-  margin-top: 10px;
-  border-radius: 10px;
-  border: none;
-}
-
-.row-calender #saveAgenda,
-.row-calender #startDate,
-.row-calender #endDate {
-  margin: auto;
-  padding: 10px 35px;
-  margin-bottom: auto;
-  margin-top: 10px;
-  border-radius: 10px;
-  background-color: var(--green);
-  border-width: 2px;
-  border: none;
-}
-
-.row-calender #cancelButton {
-  padding: 10px 35px;
-  margin-bottom: auto;
-  margin-top: 10px;
-  border-radius: 10px;
-  background-color: var(--blue);
-  border-width: 2px;
-  border: none;
-}
-
-.row-calender .bungkus {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 2rem;
-}
-
-.row-calender .bungkus1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-}
-
-.row-calender .bungkus2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-}
-
-.row-calender .bungkus4 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.row-calender #startdate,
-.row-calender #finishdate {
-  padding: 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-bottom: 25px;
-  border-radius: 3px;
-  outline: none;
-  border: none;
-}
-
-.row-calender #agenda,
-.row-calender #description {
-  padding: 10px;
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-bottom: 25px;
-  border-radius: 3px;
-  outline: none;
-  border: none;
+  display: -ms-grid;
+  display: grid;
 }
 
 .row-calender #calendar-box {
@@ -2402,33 +2306,31 @@ input.attribute_radio:checked + label {
   display: grid;
 }
 
-.row-calender #calendar-box .selected-date {
-  color: var(--clr-wht-basic) !important;
-  background-color: var(--clr-blue-star-command);
-  border-radius: 8px;
-  position: static;
-  width: 57.57px;
-  height: 47.67px;
-  left: 172.71px;
-  top: 0px;
+.row-calender #calendar-box button {
+  background: transparent;
 }
 
-.row-calender #calendar-box table td,
-.row-calender #calendar-box table th {
+.row-calender #calendar-box .selected-date {
+  color: var(--clr-wht-basic) !important;
+  background-color: var(--clr-blue-honolulu);
+  border-radius: 8px;
+  position: static;
   width: 100%;
-  color: var(--black);
+}
+
+.row-calender #calendar-box table th {
+  background-color: var(--clr-wht-basic);
+  width: 100%;
+  color: var(--clr-gry-dim);
   text-align: center;
 }
 
-.row-calender #calendar-box table td button,
-.row-calender #calendar-box table th button {
+.row-calender #calendar-box table td button {
   position: static;
-  width: 57.57px;
-  height: 47.67px;
-  left: 172.71px;
   border-radius: none;
   border-style: none;
-  background-color: var(--white);
+  background-color: var(--clr-wht-basic);
+  color: var(--clr-gry-dim);
 }
 
 @media (max-width: 1024px) {

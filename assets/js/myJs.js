@@ -5,6 +5,7 @@ $(document).ready(function() {
   parent = $('#calendar-box')
   date = new Date()
   createCalendar(parent, date)
+  $('#myCalendar tbody tr td button').prop('disabled', true)
 })
 
 const monthNamesFull      = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -17,7 +18,21 @@ function createCalendar(parent, fullDateCalendar) {
   else fullDateCalendar = new Date()
   periode = padTwo((fullDateCalendar.getMonth()+1))+"-"+fullDateCalendar.getFullYear()
   numberOfDays = new Date(fullDateCalendar.getFullYear(), fullDateCalendar.getMonth()+1, 0).getDate()
-  parent.append('<table id="myCalendar"><thead></thead><tbody></tbody></table>')
+  $('#headerMonth span').remove();
+  $('#headerMonth').append('<span class="back"><i class="icofont-rounded-left"></i></span>')
+  $('#headerMonth').append('<span id="monthYearCal" class="monthYearCal" value="'+ monthNamesFull[fullDateCalendar.getMonth()]+" "+fullDateCalendar.getFullYear()+'">'+ monthNamesFull[fullDateCalendar.getMonth()]+" "+fullDateCalendar.getFullYear()+'</span>')
+  $('#headerMonth').append('<span class="next"><i class="icofont-rounded-right"></i></span>')
+  $('#headerMonth .back').on('click', function() {
+    var newDate = fullDateCalendar
+    newDate.setMonth(newDate.getMonth() - 1)
+    createCalendar(parent, newDate)
+  })
+  $('#headerMonth .next').on('click', function() {
+    var newDate = fullDateCalendar
+    newDate.setMonth(newDate.getMonth() + 1)
+    createCalendar(parent, newDate)
+  })
+  parent.empty().append('<table id="myCalendar"><thead></thead><tbody></tbody></table>')
   tableCalendar = parent.find('#myCalendar')
   tableCalendar.find('thead').append('<tr></tr>')
   for (let x = 0; x < dayNames.length; x++) {
@@ -28,7 +43,7 @@ function createCalendar(parent, fullDateCalendar) {
     dt = new Date(fullDateCalendar.getFullYear()+", "+padTwo((fullDateCalendar.getMonth()+1))+", "+x)
     if(i > 7) i = 1
     if(i++ == 1) {tableCalendar.find('tbody').append('<tr></tr>')}
-    if(dt.getDay() == 0 || dt.getDay() == 6) textColor = 'color:red; font-weight:900'; else textColor = 'color:black';
+    if(dt.getDay() == 0 || dt.getDay() == 6) textColor = 'color:red'; else textColor = 'color:#000';
     if(x == 1){
       for (let y = 0; y < dayNames.length; y++) {
         if(dt.getDay() == y) {tableCalendar.find('tbody tr:last').append('<td align="center"><input type="hidden" id="agendaDate'+x+'"><input type="hidden" id="noteDate'+x+'"><button value="'+x+'" id="date'+x+'" class="button button-sm" style="'+textColor+'">'+x+'</button></td>'); break;}
@@ -40,32 +55,77 @@ function createCalendar(parent, fullDateCalendar) {
     }
     else tableCalendar.find('tr:last').append('<td align="center"><input type="hidden" id="agendaDate'+x+'"><input type="hidden" id="noteDate'+x+'"><button value="'+x+'" id="date'+x+'" class="button button-sm" style="'+textColor+'">'+x+'</button></td>')
     // tableCalendar.find('#date'+x).attr("onclick", "fillAgenda(this, \""+x+"\")")
-    if(x == fullDateCalendar.getDate() && fullDateCalendar.getMonth() == new Date().getMonth() && fullDateCalendar.getFullYear() == new Date().getFullYear()) tableCalendar.find('button:last').css('border', '2px solid var(--btn-info)')
+    if(x == fullDateCalendar.getDate() && fullDateCalendar.getMonth() == new Date().getMonth() && fullDateCalendar.getFullYear() == new Date().getFullYear()) tableCalendar.find('button:last')
   }
 
-  $('#myCalendar button').on('click', function() {
+  $('#dateStart').on('click', function () {
+    $('#myCalendar tbody tr td button').prop('disabled', false);
+    $('.row-calender #calendar-box table td').css('color','black');
+    $('#myCalendar tbody tr td button');
+    $('#headerMonth').css('color','black');
+    if($(this).hasClass('active')) {
+      $(this).removeClass('active')
+      $('#dateFinish').addClass('active')
+    }else{
+      $(this).addClass('active')
+      $('#dateFinish').removeClass('active')
+    }
+  });
+
+  $('#dateFinish').on('click', function () {
+    $('#myCalendar tbody tr td button').prop('disabled', false)
+    if($(this).hasClass('active')) {
+      $(this).removeClass('active')
+      $('#dateStart').addClass('active')
+    }else{
+      $(this).addClass('active')
+      $('#dateStart').removeClass('active')
+    }
+  });
+
+  $('#nama-acara').on('click', function(){
+    $('#myCalendar tbody tr td button').removeClass('selected-date')
+    $('#dateStart').removeClass('active')
+    $('#dateFinish').removeClass('active')
+  });
+  
+
+  $('#myCalendar tbody tr td button').on('click', function() {
+    var valDate = $(this).val();
+    getMonthYear = padTwo((fullDateCalendar.getMonth()+1))+"/"+fullDateCalendar.getFullYear()
     $('#myCalendar button').removeClass('selected-date')
     $(this).toggleClass('selected-date')
-    $('#startdate').val($(this).val())
-  })
-
+    $('.date-calender .active input').val(valDate+"/"+getMonthYear)
+  });
+  
 }
 
-$(document).ready(function(){
-  //modal - pop up calendar -- hide --show
-  $('.booking-menu').click(function(){
-  $('#modal-kalender').show();
-  $('#card-modal-content2').hide();
-  })
 
+$(document).ready(function(){
   $('#closeButton').click(function(){
     $('#modal-kalender').hide();
   })
 
   $('#nextButton').click(function(){
-    $('#card-modal-content1').hide();
-    $('#card-modal-content2').show();
-    $('#opsi-eo-show').hide();
+    var getStartDate = $('#dt-start').val();
+    var getFinishDate = $('#dt-finish').val();
+    var getSpeakers = $('#nameSpeakers').val();
+    var getTitleEvent = $('#titleEvent').val();
+    var getDescEvent = $('#descEvent').val();
+    var timeStart = $('#timeStart').val();
+    var timeFinish = $('#timeFinish').val();
+    if(getStartDate == '' || getFinishDate == '' || getSpeakers == '' || getTitleEvent == '' || getDescEvent == '' || timeFinish == '' || timeStart == ''){
+      swal("PERINGATAN", "Lengkapi pengisian form sebelum lanjut", "warning");
+    }else{
+      $('#dateResult').find('p').empty().append('<p style="color: #0077B5;">'+getStartDate+' - '+getFinishDate+'</p>');
+      $('#timeResult').find('p').empty().append('<p style="color: #0077B5;">'+timeStart+' - '+timeFinish+'</p>');
+      $('#speakersResult').find('p').empty().append('<p style="color: #0077B5;">'+getSpeakers+'</p>');
+      $('#eventResult').find('p').empty().append('<p style="color: #0077B5;">'+getTitleEvent+'</p>');
+      $('#descResult').find('p').empty().append('<p style="color: #0077B5;">'+getDescEvent+'</p>');
+      $('#card-modal-content1').hide();
+      $('#card-modal-content2').show();
+      $('#opsi-eo-show').hide();
+    }
   })
 
   $('#backButton').click(function(){
@@ -81,15 +141,6 @@ $(document).ready(function(){
       $('#opsi-eo-show').hide();
     }
   });
-  // Contoh Yang atas
-  // $('input[type="checkbox"]').click(function() {
-  //   if($(this).is(":checked")) {
-  //     $('#header-filter a').show();
-  //   }
-  //   else if($(this).is(":not(:checked)")) {
-  //     $('#header-filter a').hide();
-  //   }
-  // });
 })
 
 function padTwo(n) {
@@ -98,10 +149,17 @@ function padTwo(n) {
 }
 var btn = document.getElementById("calendar-box");
 
-//user profile login
-$('#nr_main').on('click', function(){
-  this.classList.toggle("active");
-});
+function openModal(el) {
+  $('#modal-kalender').show();
+  var card = $(el).closest('.card-profile');
+  // alert(card.find('.speaker-profile h3').html())
+  $('#modal-kalender').find('#speakers-booking input').remove();
+  $('#modal-kalender').find('#speakers-booking').append('<input id="nameSpeakers" style="color:#000" value="'+card.find('.speaker-profile h3').html()+'" class="form" type="text" placeholder="Speakers" disabled>');
+  
+  $('.row-calender #calendar-box table td').css('color','grey');
+  $('#myCalendar tbody tr td button').css('color','grey');
+  $('#headerMonth').css('color','grey');
+}
 
 //srolUp
 $(document).ready(function(){ 

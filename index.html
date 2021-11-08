@@ -393,7 +393,7 @@
     
     <!-- popup-kalender -->
     
-    <section id="modal-kalender">
+    <section id="modal-kalender" class="modal-kalender">
       <section id="booking-popup">
         <section id="modal-calender-row" class="section-content">
           <section class="card-modal-calender">
@@ -404,10 +404,10 @@
               <section id="card-modal-content1">
                 <section id="calender-booking-speakers">
                   <div class="calender-content">
-                    <section class="row-calender">
-                      <section class="header-calender">
+                    <section class="row-calender getMonth">
+                      <section id="headerMonth" class="header-calender">
                         <span class="back"><i class="icofont-rounded-left"></i></span>
-                        <span>October 2021</span>
+                        <span class="gaskeun">October 2021</span>
                         <span class="next"><i class="icofont-rounded-right"></i></span>
                       </section>
                       <section class="content-kalender">
@@ -420,33 +420,44 @@
                   <div class="date-calender">
                     <div class="start-date row-form-booking">
                       <label for="">Start Date</label>
-                      <div class="date-btn">
-                        <i class="icofont-ui-calendar"></i>
-                        <span>18/02/2021</span>
+                      <div id="dateStart" class="date-btn" style="display:flex">
+                        <i class="icofont-ui-calendar" style="padding: 0 10px 0 0;"></i>
+                        <input id="dt-start" type="text" placeholder="Select Date" style="width: 100%;font-size: 17px;color: var(--clr-blue-lapis-lazuli);" disabled>
+                        <!-- <span>18/02/2021</span> -->
                       </div>
                     </div>
                     <div class="finish-date row-form-booking">
                       <label for="">Finish Date</label>
-                      <div class="date-btn">
-                        <i class="icofont-ui-calendar"></i>
-                        <span>18/02/2021</span>
+                      <div id="dateFinish" class="date-btn" style="display:flex">
+                        <i class="icofont-ui-calendar" style="padding: 0 10px 0 0;"></i>
+                        <input id="dt-finish" type="text" placeholder="Select Date" style="width: 100%;font-size: 17px;color: var(--clr-blue-lapis-lazuli);" disabled>
+                        <!-- <span>18/02/2021</span> -->
                       </div>
                     </div>
                   </div>
                 </section>
                 <section id="form-booking-speakers"> 
                   <div class="content-form-booking">
+
                     <div class="row-form-booking" id="speakers-booking">
-                      <label for=""> Speakers</label>
-                      <input class="form" type="text" placeholder="Speakers">
+                      <label for="">Speaker</label>
+                      <input id="nameSpeakers" class="form" type="text" placeholder="Speakers">
                     </div>
                     <div class="row-form-booking" id="nama-acara">
                       <label for=""> Judul Acara</label>
-                      <input class="form" type="text" placeholder="Judul Acara">
+                      <input id="titleEvent" class="form" type="text" placeholder="Judul Acara">
                     </div>
                     <div class="row-form-booking" id="about-acara">
                       <label for="">Tentang Acara </label>
-                      <textarea placeholder="(jenis acara, audience, sasaran yang ingin dicapai, durasi sesi bicara)" class="textarea-input" name="" id="" cols="30" rows="4"></textarea>
+                      <textarea  id="descEvent" class="textarea-input" name="" cols="30" rows="2" placeholder="(jenis acara, audience, sasaran yang ingin dicapai, durasi sesi bicara)"></textarea>
+                    </div>
+                    <div class="row-form-booking" id="time">
+                      <label for="">Time</label>
+                      <div style="display: flex;gap:10px">
+                        <input style="width:40%;" id="timeStart" class="form" type="time" placeholder="Time Start">
+                        <h3 style="width:10%;text-align: center;align-self: center;">-</h3>
+                        <input style="width:40%" id="timeFinish" class="form" type="time" placeholder="Time Finish">
+                      </div>
                     </div>
                   </div>
                   <div id="form-btn-booking">
@@ -457,22 +468,26 @@
                   </div>
                 </section>
               </section>
-              <section id="card-modal-content2">
+              <section id="card-modal-content2" style="display:none">
                 <div id="popup-verifikasi-eo">
                   <div class="ket-booking">
-                    <div>
+                    <div id="dateResult">
                       <label for="">Tanggal Booking</label>
                       <p style="color: #0077B5;">18/02/2021 - 18/02/2021</p>
                     </div>
-                    <div>
+                    <div id="timeResult">
+                      <label for="">Waktu Booking</label>
+                      <p style="color: #0077B5;">18/02/2021 - 18/02/2021</p>
+                    </div>
+                    <div id="speakersResult">
                       <label for="">Speaker</label>
                       <p>Arnold Schwarzenegger</p>
                     </div>
-                    <div>
+                    <div id="eventResult">
                       <label for="">Judul Acara</label>
                       <p>Internasional Speakers</p>
                     </div>
-                    <div>
+                    <div id="descResult">
                       <label for="">Tentang Acara</label>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea laboriosam magni veniam iusto, quaerat unde eum molestiae facere et.</p>
                     </div>

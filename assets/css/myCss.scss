@@ -1632,7 +1632,8 @@ input.attribute_radio {
 #modal-kalender {
   display: none;
 }
-.unset{
+
+.unset {
   display: unset;
 }
 
@@ -1927,7 +1928,8 @@ input.attribute_radio {
 //kalender
 .row-calender {
   display: grid;
-  gap: 3rem;
+  height: 100%;
+  width: 100%;
 
   .header-calender {
     display: flex;
@@ -1935,7 +1937,7 @@ input.attribute_radio {
   }
 
   #date {
-    width: 30px;
+    width: 100%;
   }
 
   input {
@@ -1947,119 +1949,39 @@ input.attribute_radio {
   }
 
   .content-kalender {
-    display: flex;
-  }
-
-  .tombol {
-    display: flex;
-  }
-
-  #delAgenda {
-    background-color: var(--red);
-    padding: 10px 35px;
-    margin-bottom: auto;
-    margin-top: 10px;
-    border-radius: 10px;
-    border: none;
-  }
-
-  #saveAgenda,
-  #startDate,
-  #endDate {
-    margin: auto;
-    padding: 10px 35px;
-    margin-bottom: auto;
-    margin-top: 10px;
-    border-radius: 10px;
-    background-color: var(--green);
-    border-width: 2px;
-    border: none;
-
-  }
-
-  #cancelButton {
-    padding: 10px 35px;
-    margin-bottom: auto;
-    margin-top: 10px;
-    border-radius: 10px;
-    background-color: var(--blue);
-    border-width: 2px;
-    border: none;
-  }
-
-  .bungkus {
-    display: flex;
-    gap: 2rem;
-
-  }
-
-  .bungkus1 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .bungkus2 {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .bungkus4 {
-    display: flex;
-  }
-
-  #startdate,
-  #finishdate {
-    padding: 10px;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-  }
-
-  #agenda,
-  #description {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
+    display: grid;
   }
 
   #calendar-box {
     display: grid;
 
+    button {
+      background: transparent;
+    }
+
     .selected-date {
       color: var(--clr-wht-basic) !important;
-      background-color: var(--clr-blue-star-command);
+      background-color: var(--clr-blue-honolulu);
       border-radius: 8px;
       position: static;
-      width: 57.57px;
-      height: 47.67px;
-      left: 172.71px;
-      top: 0px;
+      width: 100%;
     }
 
     table {
-
-      td,
       th {
+        background-color: var(--clr-wht-basic);
         width: 100%;
-        color: var(--black);
+        color: var(--clr-gry-dim);
         text-align: center;
+      }
 
+      td {
         button {
           position: static;
-          width: 57.57px;
-          height: 47.67px;
-          left: 172.71px;
           border-radius: none;
           border-style: none;
-          background-color: var(--white);
+          background-color: var(--clr-wht-basic);
+          color: var(--clr-gry-dim);
         }
       }
     }
