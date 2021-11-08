@@ -174,7 +174,7 @@ $(document).ready(function(){
   }); 
 });
 
-//edit profil
+//edit profile
 $('.edit-profil').click(function(){
   $('#show-edit-profil').show();
   $('#row-profile-speaker').hide();
