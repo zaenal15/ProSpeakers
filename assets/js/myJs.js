@@ -243,8 +243,8 @@ $("#imageUpload").change(function() {
 //popup content
 $(document).ready(function(){
   $('.close-popup-btn').click(function(){
-    $('#popup-form-book').hide()
-    $('#popup-form-prestasi').hide()
+    $('#row-popup-form-book').hide()
+    $('#row-popup-form-prestasi').hide()
   })
   
   $('#btn-add-buku').click(function(){
