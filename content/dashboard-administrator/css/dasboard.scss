@@ -851,6 +851,12 @@ body {
     border-radius: 20px;
     padding: 20px;
   }
+  
+  .section-content{
+    width: 80%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
 
   .form-title{
     font-weight: 500;
@@ -941,10 +947,62 @@ body {
     }
   }
   
-  .section-content{
-    width: 80%;
-    margin-left: auto !important;
-    margin-right: auto !important;
+  .row-tag-input{
+    padding: 10px;
+    background: var(--clr-wht-2);
+    border-radius: 5px;
+    border: 1px solid var(--clr-wht-cultured);
+
+    h1{
+      font-size: 18px;
+      margin-top: 0px;
+      margin-bottom: 20px;
+    }
+
+    ul{
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      display: inline-block;
+
+      li{
+        font-size: medium;
+        display: inline-block;
+        background: var(--clr-blue-azure);
+        color: var(--clr-blue-lapis-lazuli);
+        padding: 3px 5px 3px 10px;
+        border-radius: 3px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+
+        a{
+          color: white;
+          text-decoration: none;
+          margin-left: 5px;
+          font-size: 10px;
+          background: var(--clr-orng-bittersweet);
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          display: inline-flex;
+          text-align: center;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    input{
+      border: 0px;
+      background: none;
+      margin-bottom: 5px;
+      display: inline-block;
+      font-size: medium;
+    }
+  }
+
+  #row-popup-form-book, #row-popup-form-prestasi{
+    display: none;
   }
 
   #popup-form-book, #popup-form-prestasi{

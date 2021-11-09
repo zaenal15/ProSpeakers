@@ -159,6 +159,46 @@ function openModal(el) {
   $('#headerMonth').css('color','grey');
 }
 
+// input tag
+var txt = document.getElementById('txt');
+var list = document.getElementById('list');
+var items = ['Digital Leadership', 'Business Management'];
+
+txt.addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    let val = txt.value;
+    if (val !== '') {
+      if (items.indexOf(val) >= 0) {
+        alert('Tag name is a duplicate');
+      } else {
+        items.push(val);
+        render();
+        txt.value = '';
+        txt.focus();
+      }
+    } else {
+      alert('Please type a tag Name');
+    }
+  }
+});
+
+function render() {
+  list.innerHTML = '';
+  items.map((item, index) => {
+    list.innerHTML += `<li><span>${item}</span><a href="javascript: remove(${index})">X</a></li>`;
+  });
+}
+
+function remove(i) {
+  items = items.filter(item => items.indexOf(item) != i);
+  render();
+}
+
+window.onload = function() {
+  render();
+  txt.focus();
+}
+
 //srolUp
 $(document).ready(function(){ 
   $(window).scroll(function(){ 
@@ -201,19 +241,16 @@ $("#imageUpload").change(function() {
   });
 
 //popup content
-
 $(document).ready(function(){
   $('.close-popup-btn').click(function(){
     $('#popup-form-book').hide()
     $('#popup-form-prestasi').hide()
   })
   
-  $('#popup-form-book').hide()
   $('#btn-add-buku').click(function(){
     $('#popup-form-book').show()
   })
 
-  $('#popup-form-prestasi').hide()
   $('#btn-add-prestasi').click(function(){
     $('#popup-form-prestasi').show()
   })
