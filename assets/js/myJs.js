@@ -248,11 +248,11 @@ $(document).ready(function(){
   })
   
   $('#btn-add-buku').click(function(){
-    $('#popup-form-book').show()
+    $('#row-popup-form-book').show()
   })
 
   $('#btn-add-prestasi').click(function(){
-    $('#popup-form-prestasi').show()
+    $('#row-popup-form-prestasi').show()
   })
 });
 
