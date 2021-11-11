@@ -15,8 +15,10 @@
   --clr-blue-star-command:#0077B5;
   --clr-blue-lapis-lazuli:#005D8F;
   --clr-blue-honolulu: #0068AF;
+  --clr-orng-pale-pink:#FFD8D6;
   --clr-orng-bittersweet:#FF645C;
   --clr-orng-tart:#FF3D33;
+  --clr-grn-nyanza:#DDF8E2;
   --clr-grn-malachite:#4CD964;
   --clr-grn-malachite-2:#35D450;
 }
@@ -276,13 +278,177 @@ body {
     padding: 1rem;
     display: grid;
     grid-template-columns: 1fr;
+
+    //Jadwal
+    #content-wrap-jadwal {
+      font-size: medium;
+
+      #row-content-jadwal {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+
+        .content-jadwal-1 {
+          .card {
+            padding: 0px;
+            overflow: hidden;
+
+            .header-calendar {
+              background-color: var(--clr-blue-star-command);
+              padding: 20px;
+
+              .calendar-header {
+                display: flex;
+                justify-content: space-around;
+                color: var(--clr-wht-basic);
+
+                .back,
+                .next {
+                  cursor: pointer;
+                }
+              }
+            }
+
+            .calender-content {
+              .row-calender {
+                .content-kalender {
+                  .calendar-inportant {
+                    #calendar-box {
+                      display: grid;
+                      padding: 20px;
+
+                      button {
+                        background: transparent;
+                      }
+
+                      .selected-date {
+                        color: var(--clr-wht-basic) !important;
+                        background-color: var(--clr-blue-honolulu);
+                        border-radius: 8px;
+                        position: static;
+                        width: 100%;
+                      }
+
+                      table {
+                        th {
+                          background-color: var(--clr-wht-basic);
+                          width: 100%;
+                          color: var(--clr-gry-dim);
+                          text-align: center;
+                        }
+
+                        td {
+                          button {
+                            position: static;
+                            border-radius: none;
+                            border-style: none;
+                            background-color: var(--clr-wht-basic);
+                            color: var(--clr-gry-dim);
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .content-jadwal-2 {
+          width: 100%;
+
+          .card {
+            .header-jadwal-content {
+              display: grid;
+              gap: 1rem;
+
+              .header-list-jadwal-speaker {
+                font-weight: 600;
+                h2{
+                  font-size: larger;
+                }
+              }
+
+              .btn-status-jadwal {
+                background-color: var(--clr-silver);
+                color: var(--clr-wht-basic);
+                height: 30px;
+                min-width: 80px;
+                border-radius: 20px;
+
+                &:hover {
+                  background: var(--clr-blue-star-command);
+                  color: var(--clr-wht-basic);
+                }
+              }
+
+              .label-status-jadwal {
+                display: flex;
+                gap: 1rem;
+              }
+
+
+              .row-list-content-jadwal {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                overflow: auto;
+                height: 525px;
+
+                .list-content-jadwal {
+                  display: flex;
+                  gap: 1rem;
+                  align-items: center;
+                  border: 1px solid var(--clr-silver);
+                  border-radius: 20px;
+                  padding: 10px;
+
+                  .status-jadwal-completed {
+                    background-color: var(--clr-grn-malachite);
+                    padding: 4px;
+                    line-height: 17px;
+                    border-radius: 3px;
+                    margin-right: auto;
+                    color: var(--clr-wht-basic);
+                    display: inline-block;
+                    font-size: small;
+                  }
+
+                  .status-jadwal-onschedule {
+                    background-color: var(--clr-red-rosso-corsa);
+                    padding: 4px;
+                    line-height: 17px;
+                    border-radius: 3px;
+                    margin-right: auto;
+                    color: var(--clr-wht-basic);
+                    display: inline-block;
+                    font-size: small;
+                  }
+
+                  .des-list-content-jadwal{
+                    span{
+                      font-weight: 500;
+                    }
+
+                    .date-jadwal{
+                      color: var(--clr-blue-star-command);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     
     //booking info
     #content-wrap-booking-info{
       #list-booking-info{
         display: grid;
         gap: 1.2rem;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
         .card{
           display: grid;
           gap: 1rem;
@@ -301,7 +467,7 @@ body {
             justify-content: space-between;
             border-bottom: 2px solid var(--clr-wht-cultured);
             padding-bottom: 12px;
-            .pemesan, .date-booking{
+            .pemesan{
               p{
                 padding: 4px;
                 line-height: 17px;
@@ -311,18 +477,28 @@ body {
                 margin-right: auto;
               }
             }
+
+            .status-booking-info{
+              label{
+                display: block;
+              }
+            }
           }
 
           .body-booking-info{
             display: flex;
             flex-direction: column;
             gap: 1rem;
+            .date-booking{
+              color: var(--clr-blue-star-command);
+            }
           }
 
           .bottom-booking-info{
             display: flex;
             gap: 1rem;
-            margin-left: auto;
+            justify-content: end;
+            margin-top: auto;
             button{
               font-size: small;
               height: unset;
@@ -330,19 +506,28 @@ body {
               color: var(--clr-wht-basic);
               display: flex;
               align-items: center;
+              min-width: 110px;
+              justify-content: center;
               i{
-                font-size: 20px;
+                font-size: 15px;
               }
             }
             
-            #btn-reschedule{
+            .btn-detail{
+              background: var(--clr-orng-bittersweet);
+              transition: 0.3s;
+              &:hover{
+                background: var(--clr-orng-tart);
+              }
+            }
+            .btn-reschedule{
               background: var(--clr-blue-star-command);
               transition: 0.3s;
               &:hover{
                 background: var(--clr-blue-lapis-lazuli);
               }
             }
-            #btn-approved{
+            .btn-approved{
               background: var(--clr-grn-malachite);
               transition: 0.3s;
               &:hover{
@@ -658,7 +843,7 @@ body {
           "card-5 card-5";
   
           input[type="text"], input[type="url"] {
-            width: 60%;
+            width: 100%;
           }
   
           select{
@@ -851,6 +1036,11 @@ body {
     border-radius: 20px;
     padding: 20px;
   }
+
+  .line {
+    height: 1px;
+    background: #d6d6d6;
+  }
   
   .section-content{
     width: 80%;
@@ -886,6 +1076,7 @@ body {
     }
   }
   
+  //upload foto
   .avatar-upload {
     position: relative;
     max-width: 205px;
@@ -947,6 +1138,7 @@ body {
     }
   }
   
+  //tag input
   .row-tag-input{
     padding: 10px;
     background: var(--clr-wht-2);
@@ -1001,11 +1193,151 @@ body {
     }
   }
 
-  #row-popup-form-book, #row-popup-form-prestasi{
+  .ket-booking {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    label {
+      font-weight: 500;
+    }
+  }
+
+  .pending-status, .reschedule-status, .approved-status{
+    padding: 4px;
+    line-height: 17px;
+    border-radius: 3px;
+    display: inline-block;
+  }
+
+  .pending-status{
+    color: var(--clr-orng-bittersweet);
+    background: var(--clr-orng-pale-pink);
+  }
+
+  .reschedule-status{
+    color: var(--clr-blue-star-command);
+    background: var(--clr-blue-azure);
     display: none;
   }
 
-  #popup-form-book, #popup-form-prestasi{
+  .approved-status{
+    color: var(--clr-grn-malachite);
+    background: var(--clr-grn-nyanza);
+    display: none;
+  }
+
+//popup content
+  #row-popup-detail-booking{
+    #popup-detail-booking{
+      .card{
+        padding: 0;
+      }
+      #row-content-detail-booking{
+        overflow: hidden;
+        #content-popup-detail-booking{
+          gap: 0;
+          .title-popup-detail-booking{
+            padding: 20px 30px;
+            background: var(--clr-blue-star-command);
+            h2{
+              color: var(--clr-wht-basic);
+            }
+          }
+
+          .ket-booking{
+            padding: 30px;
+            
+            .head-detail-booking{
+              display: flex;
+              justify-content: space-between;
+              label{
+                display: block;
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  #row-popup-verifikasi-approved{
+    #popup-verifikasi-approved{
+      .section-content{
+        width: 26%;
+      }
+      #content-verifikasi-approved{
+        gap: 2rem;
+        h2{
+          color: var(--clr-gry-dim);
+          font-size: x-large;
+        }
+        img{
+          width: 35%;
+        }
+        .ket-content-verivikasi-approved{
+          text-align: center;
+        }
+
+        .row-btn-verifikasi{
+          display: flex;
+          gap: 1rem;
+          justify-content: center;
+          button{
+            width: 50%;
+            font-size: medium;
+            
+           &.is-primary {
+             background-color: #1d70b8;
+             padding: 8px;
+                   
+             &:hover {
+               background-color: #1f78c4;
+             }
+             
+             &:active {
+               background-color: #eee;
+             }
+           }
+           
+           &.is-secondary {
+             border: 1px solid #333333;
+             color: #333333;
+             padding: 8px;
+           }
+
+          }
+
+          #btn-approved-booking{
+            background: var(--clr-grn-malachite);
+            color: var(--clr-wht-basic);
+            transition: 0.3s;
+            &:hover{
+              background: var(--clr-grn-malachite-2);
+            }
+          }
+          #btn-cancel-approved{
+            background: transparent;
+            color: var(--clr-blue-star-command);
+            border: 2px solid var(--clr-blue-star-command);
+            transition: 0.3s;
+            &:hover{
+              background: var(--clr-blue-star-command);
+              color: var(--clr-wht-basic);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #row-popup-form-book, #row-popup-form-prestasi, #row-popup-detail-booking, #row-popup-verifikasi-approved{
+    display: none;
+    position: absolute;
+  }
+
+  #popup-form-book, #popup-form-prestasi, #popup-detail-booking, #popup-verifikasi-approved{
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -1024,12 +1356,12 @@ body {
       width: 55%;
     }
 
-    #content-popup-form-book, #content-popup-form-prestasi{
+    #content-popup-form-book, #content-popup-form-prestasi, #content-popup-detail-booking, #content-verifikasi-approved{
       display: flex;
       flex-direction: column;
       gap: 1rem;
 
-      .title-popup-form-book, .title-popup-form-prestasi{
+      .title-popup-form-book, .title-popup-form-prestasi, .title-popup-detail-booking{
         display: flex;
         justify-content: space-between;
         button{
@@ -1051,6 +1383,70 @@ body {
           transition: 0.3s;
           &:hover{
             background: var(--clr-blue-lapis-lazuli);
+          }
+        }
+      }
+    }
+  }
+
+  //kalender
+  .row-calender {
+    display: grid;
+    height: 100%;
+    width: 100%;
+    gap: 1rem;
+
+    .header-calender {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    #date {
+      width: 100%;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: auto;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .content-kalender {
+      display: grid;
+    }
+
+    #calendar-box {
+      display: grid;
+
+      button {
+        background: transparent;
+      }
+
+      .selected-date {
+        color: var(--clr-wht-basic) !important;
+        background-color: var(--clr-blue-honolulu);
+        border-radius: 8px;
+        position: static;
+        width: 100%;
+      }
+
+      table {
+        th {
+          background-color: var(--clr-wht-basic);
+          width: 100%;
+          color: var(--clr-gry-dim);
+          text-align: center;
+        }
+
+        td {
+          button {
+            position: static;
+            border-radius: none;
+            border-style: none;
+            background-color: var(--clr-wht-basic);
+            color: var(--clr-gry-dim);
           }
         }
       }
@@ -1114,6 +1510,13 @@ body {
     //dasboard content
     #dashboard-content{
       padding-bottom: 5rem;
+      //Jadwal
+      #content-wrap-jadwal {
+        #row-content-jadwal {
+          grid-template-columns: 1fr;
+        }
+      }
+
       #content-wrap-profil-speaker{
         #row-profile-speaker {
           #ket-profile {
@@ -1152,6 +1555,7 @@ body {
             }
           }
         }
+        
 
         #show-edit-profil{
           #edit-profil-form{
@@ -1171,6 +1575,22 @@ body {
     #popup-form-book, #popup-form-prestasi{
       .section-content{
         width: 80%;
+      }
+    }
+    
+    #row-popup-detail-booking{
+      #popup-detail-booking{
+        .section-content{
+          width: 95%;
+        }
+      }
+    }
+    
+    #row-popup-verifikasi-approved{
+      #popup-verifikasi-approved{
+        .section-content{
+          width: 80%;
+        }
       }
     }
   }

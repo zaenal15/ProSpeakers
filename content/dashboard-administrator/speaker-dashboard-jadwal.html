@@ -52,11 +52,13 @@
       <section id="content-wrap-jadwal">
         <section id="row-content-jadwal">
           <section class="content-jadwal-1">
-            <section class="card" style="overflow: auto;">
-              <section id="headerMonth" class="calendar-header">
-                <span class="back"><i class="icofont-rounded-left"></i></span>
-                    <span>October 2021</span>
-                <span class="next"><i class="icofont-rounded-right"></i></span>
+            <section class="card">
+              <section class="header-calendar">
+                <section id="headerMonth" class="calendar-header">
+                  <span class="back"><i class="icofont-rounded-left"></i></span>
+                      <span>October 2021</span>
+                  <span class="next"><i class="icofont-rounded-right"></i></span>
+                </section>
               </section>
               <div class="calender-content">
                 <section class="row-calender">
@@ -72,37 +74,42 @@
           <section class="content-jadwal-2">
             <section class="card">
               <section class="header-jadwal-content">
-                <div class="pemesan">
-                  <label>Jadwal Speaker</label>
+                <div class="header-list-jadwal-speaker">
+                  <h2>Jadwal Speaker</h2>
                 </div>
-                <section class="row-list-content-jadwal">
-                  <section class="list-content-jadwal">
+                <div id="filter-jadwal" class="label-status-jadwal">
+                  <button class="btn-status-jadwal">All</button>
+                  <button class="btn-status-jadwal">Completed</button>
+                  <button class="btn-status-jadwal">On Schedule</button>
+                </div>
+                <section id="holder-jadwal" class="row-list-content-jadwal">
+                  <section id="completed" class="list-content-jadwal">
                     <div class="gambar-list-content-jadwal">
                       <img src="../../assets/img/icon/icon-jadwal.svg" alt="">
                     </div>
                     <div class="des-list-content-jadwal">
                       <span>Seminar Nasional Digital Transformasi 4.0</span>
-                      <p>10/02/2021 - 10/02/2021</p>
+                      <p class="date-jadwal">10/02/2021 - 10/02/2021</p>
                       <p class="status-jadwal-completed">Completed</p>
                     </div>
                   </section>
-                  <section class="list-content-jadwal">
+                  <section id="onschedule" class="list-content-jadwal">
                     <div class="gambar-list-content-jadwal">
                       <img src="../../assets/img/icon/icon-jadwal.svg" alt="">
                     </div>
                     <div class="des-list-content-jadwal">
                       <span>Seminar Nasional Digital Transformasi 4.0</span>
-                      <p>10/02/2021 - 10/02/2021</p>
+                      <p class="date-jadwal">10/02/2021 - 10/02/2021</p>
                       <p class="status-jadwal-onschedule">On Schedule</p>
                     </div>
                   </section>
-                  <section class="list-content-jadwal">
+                  <section id="onschedule" class="list-content-jadwal">
                     <div class="gambar-list-content-jadwal">
                       <img src="../../assets/img/icon/icon-jadwal.svg" alt="">
                     </div>
                     <div class="des-list-content-jadwal">
                       <span>Seminar Nasional Digital Transformasi 4.0</span>
-                      <p>10/02/2021 - 10/02/2021</p>
+                      <p class="date-jadwal">10/02/2021 - 10/02/2021</p>
                       <p class="status-jadwal-onschedule">On Schedule</p>
                     </div>
                   </section>

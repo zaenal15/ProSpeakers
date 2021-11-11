@@ -160,44 +160,66 @@ function openModal(el) {
 }
 
 // input tag
-var txt = document.getElementById('txt');
-var list = document.getElementById('list');
-var items = ['Digital Leadership', 'Business Management'];
+$(document).ready(function(){
 
-txt.addEventListener('keypress', function(e) {
-  if (e.key === 'Enter') {
-    let val = txt.value;
-    if (val !== '') {
-      if (items.indexOf(val) >= 0) {
-        alert('Tag name is a duplicate');
+  var txt = document.getElementById('txt');
+  var list = document.getElementById('list');
+  var items = ['Digital Leadership', 'Business Management'];
+  
+  txt.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      let val = txt.value;
+      if (val !== '') {
+        if (items.indexOf(val) >= 0) {
+          alert('Tag name is a duplicate');
+        } else {
+          items.push(val);
+          render();
+          txt.value = '';
+          txt.focus();
+        }
       } else {
-        items.push(val);
-        render();
-        txt.value = '';
-        txt.focus();
+        alert('Please type a tag Name');
       }
-    } else {
-      alert('Please type a tag Name');
     }
+  });
+  
+  function render() {
+    list.innerHTML = '';
+    items.map((item, index) => {
+      list.innerHTML += `<li><span>${item}</span><a href="javascript: remove(${index})">X</a></li>`;
+    });
+  }
+  
+  function remove(i) {
+    items = items.filter(item => items.indexOf(item) != i);
+    render();
+  }
+  
+  window.onload = function() {
+    render();
+    txt.focus();
   }
 });
 
-function render() {
-  list.innerHTML = '';
-  items.map((item, index) => {
-    list.innerHTML += `<li><span>${item}</span><a href="javascript: remove(${index})">X</a></li>`;
+//dashboard booking info status
+$(document).ready(function(){ 
+  $('.btn-approved').click(function(){
+    $('#row-popup-verifikasi-approved').show();
+    $('#btn-cancel-approved').click(function(){
+      $('#row-popup-verifikasi-approved').hide();
+      $('.pending-status').hide();
+    });
   });
-}
 
-function remove(i) {
-  items = items.filter(item => items.indexOf(item) != i);
-  render();
-}
-
-window.onload = function() {
-  render();
-  txt.focus();
-}
+  $('#btn-approved-booking').click(function(){
+    $('#row-popup-verifikasi-approved').hide();
+    $('.pending-status').hide();
+    $('.approved-status').show();
+    $('.reschedule-status').hide();
+    $('.btn-reschedule, .btn-approved').attr('disabled', true).css('background','#C7C7C7');
+  });
+});
 
 //srolUp
 $(document).ready(function(){ 
@@ -240,21 +262,39 @@ $("#imageUpload").change(function() {
     readURL(this);
   });
 
-//popup content
+//user profile login
+$('#nr_main').on('click', function(){
+  this.classList.toggle("active");
+});
+
+//popup dashboard
+
 $(document).ready(function(){
   $('.close-popup-btn').click(function(){
     $('#row-popup-form-book').hide()
     $('#row-popup-form-prestasi').hide()
   })
   
+  //popup dashboard profil - content add book & add prestasi
   $('#btn-add-buku').click(function(){
     $('#row-popup-form-book').show()
   })
-
+  
   $('#btn-add-prestasi').click(function(){
     $('#row-popup-form-prestasi').show()
   })
 });
+
+//popup dashboard booking info 
+$(document).ready(function(){
+  $('.close-popup-btn').click(function(){
+    $('#row-popup-detail-booking').hide()
+  })
+  $('.btn-detail').click(function(){
+    $('#row-popup-detail-booking').show()
+  })
+});
+
 
 //filter speaker
 $('#closeFilter').on('click', function(){
