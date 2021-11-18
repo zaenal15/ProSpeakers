@@ -202,6 +202,39 @@ $(document).ready(function(){
   }
 });
 
+//priview foto
+$(document).ready(function(){ 
+  $(".popup-img img").click(function () {
+    var $src = $(this).attr("src");
+    $(".show").fadeIn();
+    $(".img-show img").attr("src", $src);
+  });
+  
+  $("span, .overlay").click(function () {
+    $(".show").fadeOut();
+  });
+});
+
+//multi tab menus
+$('ul.tabs li').click(function(){
+  var $this = $(this);
+  var $theTab = $(this).attr('id');
+  console.log($theTab);
+  if($this.hasClass('active')){
+    // do nothing
+  } else{
+    $this.closest('.tabs_wrapper').find('ul.tabs li, .tabs_container .tab_content').removeClass('active');
+    $('.tabs_container .tab_content[data-tab="'+$theTab+'"], ul.tabs li[id="'+$theTab+'"]').addClass('active');
+  }
+});
+  
+// tab menu
+// $(".tab-menu").click(function() {
+// 	$(".tab-menu").removeClass("active-tab").eq($(this).index()).addClass("active-tab");
+// 	$(".tab-content").hide().eq($(this).index()).fadeIn()
+// }).eq(0).addClass("active-tab");
+
+
 //dashboard booking info status
 $(document).ready(function(){ 
   $('.btn-approved').click(function(){

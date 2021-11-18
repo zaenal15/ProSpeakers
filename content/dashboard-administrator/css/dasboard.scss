@@ -843,7 +843,7 @@ body {
           "card-5 card-5";
   
           input[type="text"], input[type="url"] {
-            width: 100%;
+            width: 50%;
           }
   
           select{
@@ -1510,6 +1510,7 @@ body {
     //dasboard content
     #dashboard-content{
       padding-bottom: 5rem;
+
       //Jadwal
       #content-wrap-jadwal {
         #row-content-jadwal {

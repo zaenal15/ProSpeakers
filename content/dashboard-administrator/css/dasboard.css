@@ -988,7 +988,7 @@ body .checkbox :checked ~ .checkmark {
 }
 
 #main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form input[type="text"], #main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form input[type="url"] {
-  width: 100%;
+  width: 50%;
 }
 
 #main-content #dashboard-content #content-wrap-profil-speaker #show-edit-profil #edit-profil-form select {
