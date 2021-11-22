@@ -391,163 +391,7 @@
       </section>
     </section><!-- end top speaker -->
     
-    <!-- popup-kalender -->
     
-    <section id="modal-kalender" class="modal-kalender">
-      <section id="booking-popup">
-        <section id="modal-calender-row" class="section-content">
-          <section class="card-modal-calender">
-            <section class="modal-header">
-              <h2>Booking Speakers</h2>
-            </section>
-            <section class="modal-content">
-              <section id="card-modal-content1">
-                <section id="calender-booking-speakers">
-                  <div class="calender-content">
-                    <section class="row-calender getMonth">
-                      <section id="headerMonth" class="header-calender">
-                        <span class="back"><i class="icofont-rounded-left"></i></span>
-                        <span class="gaskeun">October 2021</span>
-                        <span class="next"><i class="icofont-rounded-right"></i></span>
-                      </section>
-                      <section class="content-kalender">
-                        <div >
-                          <section id="calendar-box"></section>
-                        </div>
-                      </section>
-                    </section>
-                  </div>
-                  <div class="date-calender">
-                    <div class="start-date row-form-booking">
-                      <label for="">Start Date</label>
-                      <div id="dateStart" class="date-btn" style="display:flex">
-                        <i class="icofont-ui-calendar" style="padding: 0 10px 0 0;"></i>
-                        <input id="dt-start" type="text" placeholder="Select Date" style="width: 100%;font-size: 17px;color: var(--clr-blue-lapis-lazuli);" disabled>
-                        <!-- <span>18/02/2021</span> -->
-                      </div>
-                    </div>
-                    <div class="finish-date row-form-booking">
-                      <label for="">Finish Date</label>
-                      <div id="dateFinish" class="date-btn" style="display:flex">
-                        <i class="icofont-ui-calendar" style="padding: 0 10px 0 0;"></i>
-                        <input id="dt-finish" type="text" placeholder="Select Date" style="width: 100%;font-size: 17px;color: var(--clr-blue-lapis-lazuli);" disabled>
-                        <!-- <span>18/02/2021</span> -->
-                      </div>
-                    </div>
-                  </div>
-                </section>
-                <section id="form-booking-speakers"> 
-                  <div class="content-form-booking">
-
-                    <div class="row-form-booking" id="speakers-booking">
-                      <label for="">Speaker</label>
-                      <input id="nameSpeakers" class="form" type="text" placeholder="Speakers">
-                    </div>
-                    <div class="row-form-booking" id="nama-acara">
-                      <label for=""> Judul Acara</label>
-                      <input id="titleEvent" class="form" type="text" placeholder="Judul Acara">
-                    </div>
-                    <div class="row-form-booking" id="about-acara">
-                      <label for="">Tentang Acara </label>
-                      <textarea  id="descEvent" class="textarea-input" name="" cols="30" rows="2" placeholder="(jenis acara, audience, sasaran yang ingin dicapai, durasi sesi bicara)"></textarea>
-                    </div>
-                    <div class="row-form-booking" id="time">
-                      <label for="">Time</label>
-                      <div style="display: flex;gap:10px">
-                        <input style="width:40%;" id="timeStart" class="form" type="time" placeholder="Time Start">
-                        <h3 style="width:10%;text-align: center;align-self: center;">-</h3>
-                        <input style="width:40%" id="timeFinish" class="form" type="time" placeholder="Time Finish">
-                      </div>
-                    </div>
-                  </div>
-                  <div id="form-btn-booking">
-                    <div class="btn-popup">
-                      <button id="closeButton" class="btn-cancel">Cancel</button>
-                      <button id="nextButton" class="btn-next">Next</button>
-                    </div>
-                  </div>
-                </section>
-              </section>
-              <section id="card-modal-content2" style="display:none">
-                <div id="popup-verifikasi-eo">
-                  <div class="ket-booking">
-                    <div id="dateResult">
-                      <label for="">Tanggal Booking</label>
-                      <p style="color: #0077B5;">18/02/2021 - 18/02/2021</p>
-                    </div>
-                    <div id="timeResult">
-                      <label for="">Waktu Booking</label>
-                      <p style="color: #0077B5;">18/02/2021 - 18/02/2021</p>
-                    </div>
-                    <div id="speakersResult">
-                      <label for="">Speaker</label>
-                      <p>Arnold Schwarzenegger</p>
-                    </div>
-                    <div id="eventResult">
-                      <label for="">Judul Acara</label>
-                      <p>Internasional Speakers</p>
-                    </div>
-                    <div id="descResult">
-                      <label for="">Tentang Acara</label>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea laboriosam magni veniam iusto, quaerat unde eum molestiae facere et.</p>
-                    </div>
-                  </div>
-  
-                  <div class="pilih-eo">
-                    <div class="check-eo">
-                      <span>Opsi Event Organizer</span>
-                      <label id="content-show-eo" class="control control-checkbox">
-                        Booking Event Orgainizer
-                        <input type="checkbox"/>
-                        <div class="control_indicator"></div>
-                      </label>
-                    </div>
-                    <div id="opsi-eo-show">
-                      <label>Type Event Organizer</label>
-                      <ul class="opsi-eo-content">
-                        <li>
-                          <div class="radio">
-                              <input type="radio" class="attribute_radio" id="offline" value="offline" name="opsi-eo" checked/>
-                              <label for="offline">Offline</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="radio">
-                              <input type="radio" class="attribute_radio" id="online" value="online" name="opsi-eo"/>
-                              <label for="online">Online</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="radio">
-                              <input type="radio" class="attribute_radio" id="semiHybrid" value="semiHeybrid" name="opsi-eo"/>
-                              <label for="semiHybrid">Semi Hybrid </label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="radio">
-                              <input type="radio" class="attribute_radio" id="fullHybrid" value="fullHeybrid" name="opsi-eo"/>
-                              <label for="fullHybrid">Full Hybrid </label>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div id="btn-popup-booking">
-                  <div class="btn-popup">
-                    <button id="backButton" class="btn-back">Back</button>
-                    <button id="submitButton" class="btn-submit">Submit Booking</button>
-                  </div>
-                </div>
-              </section>
-            </section>
-          </section>
-        </section>
-      </section>
-    </section>
-    
-    <!-- end-popup-kalender -->
-
     <!-- find speaker -->
     <section id="find-speaker">
       <section id="find-speaker-content" class="section-content">
@@ -559,7 +403,7 @@
         </section>
       </section>
     </section><!-- end find speaker -->
-
+    
     <!-- popular topic -->
     <section id="topic">
       <section id="topic-content">
@@ -653,7 +497,7 @@
       	</div>
       </section>
     </section><!-- end client -->
-
+    
     <!-- testimonial -->
     <section id="testimonial">
       <section id="testimonial-content" class="section-content">
@@ -810,8 +654,8 @@
     <a href="#" id="scroll" style="display: none;"><i class="icofont-simple-up"></i></a>
 
     <!-- popup-kalender -->
-    <section id="modal-kalender">
-      <section id="booking-popup" class="penghalang">
+    <section id="modal-kalender" class="modal-kalender">
+      <section id="booking-popup">
         <section id="modal-calender-row" class="section-content">
           <section class="card-modal-calender">
             <section class="modal-header">
@@ -821,10 +665,10 @@
               <section id="card-modal-content1">
                 <section id="calender-booking-speakers">
                   <div class="calender-content">
-                    <section class="row-calender">
-                      <section class="header-calender">
+                    <section class="row-calender getMonth">
+                      <section id="headerMonth" class="header-calender">
                         <span class="back"><i class="icofont-rounded-left"></i></span>
-                        <span>October 2021</span>
+                        <span class="gaskeun">October 2021</span>
                         <span class="next"><i class="icofont-rounded-right"></i></span>
                       </section>
                       <section class="content-kalender">
@@ -837,59 +681,74 @@
                   <div class="date-calender">
                     <div class="start-date row-form-booking">
                       <label for="">Start Date</label>
-                      <div class="date-btn">
-                        <i class="icofont-ui-calendar"></i>
-                        <span>18/02/2021</span>
+                      <div id="dateStart" class="date-btn" style="display:flex">
+                        <i class="icofont-ui-calendar" style="padding: 0 10px 0 0;"></i>
+                        <input id="dt-start" type="text" placeholder="Select Date" style="width: 100%;font-size: 17px;color: var(--clr-blue-lapis-lazuli);" disabled>
+                        <!-- <span>18/02/2021</span> -->
                       </div>
                     </div>
                     <div class="finish-date row-form-booking">
                       <label for="">Finish Date</label>
-                      <div class="date-btn">
-                        <i class="icofont-ui-calendar"></i>
-                        <span>18/02/2021</span>
+                      <div id="dateFinish" class="date-btn" style="display:flex">
+                        <i class="icofont-ui-calendar" style="padding: 0 10px 0 0;"></i>
+                        <input id="dt-finish" type="text" placeholder="Select Date" style="width: 100%;font-size: 17px;color: var(--clr-blue-lapis-lazuli);" disabled>
+                        <!-- <span>18/02/2021</span> -->
                       </div>
                     </div>
                   </div>
                 </section>
                 <section id="form-booking-speakers"> 
                   <div class="content-form-booking">
+
                     <div class="row-form-booking" id="speakers-booking">
-                      <label for=""> Speakers</label>
-                      <input class="form" type="text" placeholder="Speakers">
+                      <label for="">Speaker</label>
+                      <input id="nameSpeakers" class="form" type="text" placeholder="Speakers">
                     </div>
                     <div class="row-form-booking" id="nama-acara">
                       <label for=""> Judul Acara</label>
-                      <input class="form" type="text" placeholder="Judul Acara">
+                      <input id="titleEvent" class="form" type="text" placeholder="Judul Acara">
                     </div>
                     <div class="row-form-booking" id="about-acara">
                       <label for="">Tentang Acara </label>
-                      <textarea placeholder="(jenis acara, audience, sasaran yang ingin dicapai, durasi sesi bicara)" class="textarea-input" name="" id="" cols="30" rows="4"></textarea>
+                      <textarea  id="descEvent" class="textarea-input" name="" cols="30" rows="2" placeholder="(jenis acara, audience, sasaran yang ingin dicapai, durasi sesi bicara)"></textarea>
+                    </div>
+                    <div class="row-form-booking" id="time">
+                      <label for="">Time</label>
+                      <div style="display: flex;gap:10px">
+                        <input style="width:40%;" id="timeStart" class="form" type="time" placeholder="Time Start">
+                        <h3 style="width:10%;text-align: center;align-self: center;">-</h3>
+                        <input style="width:40%" id="timeFinish" class="form" type="time" placeholder="Time Finish">
+                      </div>
                     </div>
                   </div>
                   <div id="form-btn-booking">
                     <div class="btn-popup">
                       <button id="closeButton" class="btn-cancel">Cancel</button>
-                      <button onclick="showNext()" id="nextButton" class="btn-next">Next</button>
+                      <button id="nextButton" class="btn-next">Next</button>
                     </div>
                   </div>
                 </section>
               </section>
-              <section id="card-modal-content2">
+              <section id="card-modal-content2" style="display:none">
                 <div id="popup-verifikasi-eo">
                   <div class="ket-booking">
-                    <div>
+                    <div id="dateResult">
                       <label for="">Tanggal Booking</label>
                       <p style="color: #0077B5;">18/02/2021 - 18/02/2021</p>
                     </div>
-                    <div>
+                    <div id="timeResult">
+                      <label for="">Waktu Booking</label>
+                      <p style="color: #0077B5;">18/02/2021 - 18/02/2021</p>
+                    </div>
+                    <div id="speakersResult">
                       <label for="">Speaker</label>
                       <p>Arnold Schwarzenegger</p>
                     </div>
-                    <div>
+                    <div id="eventResult">
                       <label for="">Judul Acara</label>
                       <p>Internasional Speakers</p>
                     </div>
-                    <div>
+                    <div id="descResult">
                       <label for="">Tentang Acara</label>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea laboriosam magni veniam iusto, quaerat unde eum molestiae facere et.</p>
                     </div>
@@ -898,7 +757,7 @@
                   <div class="pilih-eo">
                     <div class="check-eo">
                       <span>Opsi Event Organizer</span>
-                      <label class="control control-checkbox">
+                      <label id="content-show-eo" class="control control-checkbox">
                         Booking Event Orgainizer
                         <input type="checkbox"/>
                         <div class="control_indicator"></div>
@@ -938,7 +797,7 @@
                 <div id="btn-popup-booking">
                   <div class="btn-popup">
                     <button id="backButton" class="btn-back">Back</button>
-                    <button class="btn-submit">Submit Booking</button>
+                    <button id="submitButton" class="btn-submit">Submit Booking</button>
                   </div>
                 </div>
               </section>
@@ -947,6 +806,7 @@
         </section>
       </section>
     </section>
+    
     <!-- end-popup-kalender -->
 
     <!-- end general -->

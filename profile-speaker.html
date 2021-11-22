@@ -335,8 +335,15 @@
             <section id="row-card-3">
               <section id="testimonial-user" class="about-speaker card">
                 <section class="row-testimonial-content">
-                  <div>
-                    <span>TESTIMONIAL</span>
+                  <div class="filter-testimonial">
+                    <button class="active-filter">All</button>
+                    <button>Rating tertinggi</button>
+                    <button>Rating terendah</button>
+                  </div>
+
+                  <div class="top-head-testimonial">
+                    <span>TESTIMONIAL (4)</span>
+                    <button id="btn-add-testimonial">Add Testimonial</button>
                   </div>
 
                   <div class="testimonial-user-content">
@@ -360,72 +367,177 @@
                             <p class="date-testimonial">7 November 2021</p>
                           </div>
                         </div>
+
                         <div>
                           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laboriosam hic eius eligendi, mollitia numquam temporibus aspernatur alias harum ex nisi cum ut sed vero accusamus eos libero reiciendis! Dolore culpa odio, perferendis eveniet unde numquam, ratione nisi dolorem accusamus minima consectetur asperiores. Voluptas eligendi voluptates minima ipsa modi accusantium nesciunt a totam molestias sed assumenda dolorem, temporibus corporis vel? Distinctio consequatur tempore eveniet? Rerum qui numquam doloribus, dolore eveniet esse aspernatur aperiam dicta placeat quae officia deserunt nisi sed, vel omnis hic fugit minima unde recusandae temporibus optio eum! Consectetur minus quidem soluta, voluptatem recusandae amet velit facilis aspernatur.</p>
                         </div>
-                      </div>
-                    </div>
-                    <div class="list-testimonial">
-                      <div class="img-testimonial">
-                        <img src="./assets/img/icon/user-icon.svg" alt="">
-                      </div>
-                      <div class="ket-testimonial">
-                        <div class="head-testimonial">
-                          <div class="head-left">
-                            <p class="user-testimoni-name">Ronaldo Joko</p>
-                            <div class="renting-testimonial">
-                              <i class="icofont-star"></i>
-                              <i class="icofont-star"></i>
-                              <i class="icofont-star"></i>
-                              <i class="icofont-star"></i>
-                              <i class="icofont-star"></i>
-                            </div>
-                          </div>
-                          <div class="head-right">
-                            <p class="date-testimonial">7 November 2021</p>
-                          </div>
-                        </div>
-                        <div>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laboriosam hic eius eligendi, mollitia numquam temporibus aspernatur alias harum ex nisi cum ut sed vero accusamus eos libero reiciendis! Dolore culpa odio, perferendis eveniet unde numquam, ratione nisi dolorem accusamus minima consectetur asperiores. Voluptas eligendi voluptates minima ipsa modi accusantium nesciunt a totam molestias sed assumenda dolorem, temporibus corporis vel? Distinctio consequatur tempore eveniet? Rerum qui numquam doloribus, dolore eveniet esse aspernatur aperiam dicta placeat quae officia deserunt nisi sed, vel omnis hic fugit minima unde recusandae temporibus optio eum! Consectetur minus quidem soluta, voluptatem recusandae amet velit facilis aspernatur.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="list-testimonial">
-                      <div class="img-testimonial">
-                        <img src="./assets/img/icon/user-icon.svg" alt="">
-                      </div>
-                      <div class="ket-testimonial">
-                        <div class="head-testimonial">
-                          <div class="head-left">
-                            <p class="user-testimoni-name">Ronaldo Joko</p>
-                            <div class="renting-testimonial">
-                              <i class="icofont-star"></i>
-                              <i class="icofont-star"></i>
-                              <i class="icofont-star"></i>
-                              <i class="icofont-star"></i>
-                              <i class="icofont-star"></i>
-                            </div>
-                          </div>
-                          <div class="head-right">
-                            <p class="date-testimonial">7 November 2021</p>
-                          </div>
-                        </div>
-                        <div>
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laboriosam hic eius eligendi, mollitia numquam temporibus aspernatur alias harum ex nisi cum ut sed vero accusamus eos libero reiciendis! Dolore culpa odio, perferendis eveniet unde numquam, ratione nisi dolorem accusamus minima consectetur asperiores. Voluptas eligendi voluptates minima ipsa modi accusantium nesciunt a totam molestias sed assumenda dolorem, temporibus corporis vel? Distinctio consequatur tempore eveniet? Rerum qui numquam doloribus, dolore eveniet esse aspernatur aperiam dicta placeat quae officia deserunt nisi sed, vel omnis hic fugit minima unde recusandae temporibus optio eum! Consectetur minus quidem soluta, voluptatem recusandae amet velit facilis aspernatur.</p>
+
+                        <div class="text-btn-testimonial">
+                          <a href="#">Delete</a>
+                          <a href="#">Edit</a>
                         </div>
                       </div>
                     </div>
                   </div>
+
+                  <div class="testimonial-user-content">
+                    <div class="list-testimonial">
+                      <div class="img-testimonial">
+                        <img src="./assets/img/icon/user-icon.svg" alt="">
+                      </div>
+                      <div class="ket-testimonial">
+                        <div class="head-testimonial">
+                          <div class="head-left">
+                            <p class="user-testimoni-name">Ronaldo Joko</p>
+                            <div class="renting-testimonial">
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                            </div>
+                          </div>
+                          <div class="head-right">
+                            <p class="date-testimonial">7 November 2021</p>
+                          </div>
+                        </div>
+
+                        <div>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laboriosam hic eius eligendi, mollitia numquam temporibus aspernatur alias harum ex nisi cum ut sed vero accusamus eos libero reiciendis! Dolore culpa odio, perferendis eveniet unde numquam, ratione nisi dolorem accusamus minima consectetur asperiores. Voluptas eligendi voluptates minima ipsa modi accusantium nesciunt a totam molestias sed assumenda dolorem, temporibus corporis vel? Distinctio consequatur tempore eveniet? Rerum qui numquam doloribus, dolore eveniet esse aspernatur aperiam dicta placeat quae officia deserunt nisi sed, vel omnis hic fugit minima unde recusandae temporibus optio eum! Consectetur minus quidem soluta, voluptatem recusandae amet velit facilis aspernatur.</p>
+                        </div>
+
+                        <div class="text-btn-testimonial">
+                          <a href="#">Delete</a>
+                          <a href="#">Edit</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="testimonial-user-content">
+                    <div class="list-testimonial">
+                      <div class="img-testimonial">
+                        <img src="./assets/img/icon/user-icon.svg" alt="">
+                      </div>
+                      <div class="ket-testimonial">
+                        <div class="head-testimonial">
+                          <div class="head-left">
+                            <p class="user-testimoni-name">Ronaldo Joko</p>
+                            <div class="renting-testimonial">
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                            </div>
+                          </div>
+                          <div class="head-right">
+                            <p class="date-testimonial">7 November 2021</p>
+                          </div>
+                        </div>
+
+                        <div>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laboriosam hic eius eligendi, mollitia numquam temporibus aspernatur alias harum ex nisi cum ut sed vero accusamus eos libero reiciendis! Dolore culpa odio, perferendis eveniet unde numquam, ratione nisi dolorem accusamus minima consectetur asperiores. Voluptas eligendi voluptates minima ipsa modi accusantium nesciunt a totam molestias sed assumenda dolorem, temporibus corporis vel? Distinctio consequatur tempore eveniet? Rerum qui numquam doloribus, dolore eveniet esse aspernatur aperiam dicta placeat quae officia deserunt nisi sed, vel omnis hic fugit minima unde recusandae temporibus optio eum! Consectetur minus quidem soluta, voluptatem recusandae amet velit facilis aspernatur.</p>
+                        </div>
+
+                        <div class="text-btn-testimonial">
+                          <a href="#">Delete</a>
+                          <a href="#">Edit</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="testimonial-user-content">
+                    <div class="list-testimonial">
+                      <div class="img-testimonial">
+                        <img src="./assets/img/icon/user-icon.svg" alt="">
+                      </div>
+                      <div class="ket-testimonial">
+                        <div class="head-testimonial">
+                          <div class="head-left">
+                            <p class="user-testimoni-name">Ronaldo Joko</p>
+                            <div class="renting-testimonial">
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                            </div>
+                          </div>
+                          <div class="head-right">
+                            <p class="date-testimonial">7 November 2021</p>
+                          </div>
+                        </div>
+
+                        <div>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laboriosam hic eius eligendi, mollitia numquam temporibus aspernatur alias harum ex nisi cum ut sed vero accusamus eos libero reiciendis! Dolore culpa odio, perferendis eveniet unde numquam, ratione nisi dolorem accusamus minima consectetur asperiores. Voluptas eligendi voluptates minima ipsa modi accusantium nesciunt a totam molestias sed assumenda dolorem, temporibus corporis vel? Distinctio consequatur tempore eveniet? Rerum qui numquam doloribus, dolore eveniet esse aspernatur aperiam dicta placeat quae officia deserunt nisi sed, vel omnis hic fugit minima unde recusandae temporibus optio eum! Consectetur minus quidem soluta, voluptatem recusandae amet velit facilis aspernatur.</p>
+                        </div>
+
+                        <div class="text-btn-testimonial">
+                          <a href="#">Delete</a>
+                          <a href="#">Edit</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="testimonial-user-content">
+                    <div class="list-testimonial">
+                      <div class="img-testimonial">
+                        <img src="./assets/img/icon/user-icon.svg" alt="">
+                      </div>
+                      <div class="ket-testimonial">
+                        <div class="head-testimonial">
+                          <div class="head-left">
+                            <p class="user-testimoni-name">Ronaldo Joko</p>
+                            <div class="renting-testimonial">
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                              <i class="icofont-star"></i>
+                            </div>
+                          </div>
+                          <div class="head-right">
+                            <p class="date-testimonial">7 November 2021</p>
+                          </div>
+                        </div>
+
+                        <div>
+                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus laboriosam hic eius eligendi, mollitia numquam temporibus aspernatur alias harum ex nisi cum ut sed vero accusamus eos libero reiciendis! Dolore culpa odio, perferendis eveniet unde numquam, ratione nisi dolorem accusamus minima consectetur asperiores. Voluptas eligendi voluptates minima ipsa modi accusantium nesciunt a totam molestias sed assumenda dolorem, temporibus corporis vel? Distinctio consequatur tempore eveniet? Rerum qui numquam doloribus, dolore eveniet esse aspernatur aperiam dicta placeat quae officia deserunt nisi sed, vel omnis hic fugit minima unde recusandae temporibus optio eum! Consectetur minus quidem soluta, voluptatem recusandae amet velit facilis aspernatur.</p>
+                        </div>
+
+                        <div class="text-btn-testimonial">
+                          <a href="#">Delete</a>
+                          <a href="#">Edit</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="pagination-testimonial">
+                    <ul class="pagination">
+                      <li  class="pagination-arrow arrow-left">
+                        <i class="icofont-rounded-left"></i>
+                      </li>
+                      <li href="#" class="pagination-number current-number">1</li>
+                      <li href="#" class="pagination-number">2</li>
+                      <li class="pagination-number">3</li>
+                      <li href="#" class="pagination-number">4</li>
+                      <li href="#" class="pagination-number">5</li>
+                      <li href="#" class="pagination-arrow arrow-right">
+                        <i class="icofont-rounded-right"></i>
+                      </li>
+                    </ul>
+                  </div>
                 </section>
               </section>
             </section>
-            
-            
-          </div>
+          </section>
         </section>
       </section>
-    </section>
-  </section>
+    </section>  
   
     <section id="footer">
       <section id="footer-content" class="section-content">
@@ -483,8 +595,45 @@
         </section>
       </section>
     </section>
+
+    <!-- general -->
     <a class="fixed-whatsapp" href="" rel="nofollow noopener" target="_blank" title="Whatsapp"></a>
     <a href="#" id="scroll" style="display: none;"><i class="icofont-simple-up"></i></a>
+
+    <!-- popup-content-add-testimonial-->
+    <section id="row-popup-add-testimonial">
+      <section id="popup-add-testimonial">
+        <section id="row-content-add-testimonial" class="card section-content">
+          <section id="content-add-testimonial" class="card-conntent">
+            <div class="title-popup-form-prestasi">
+              <h2>TESTIMONIAL SPEAKERS</h2>
+              <button class="close-popup-btn"><i class="icofont-close"></i></button>
+            </div>
+
+            <div class="row-content-rating">
+              <div class="rating-box">
+                <div class="rating-container">
+                  <input type="radio" name="rating" value="5" id="star-5"> <label for="star-5"><i class='bx bxs-star'></i></label>
+                  <input type="radio" name="rating" value="4" id="star-4"> <label for="star-4"><i class='bx bxs-star'></i></label>
+                  <input type="radio" name="rating" value="3" id="star-3"> <label for="star-3"><i class='bx bxs-star'></i></label>
+                  <input type="radio" name="rating" value="2" id="star-2"> <label for="star-2"><i class='bx bxs-star'></i></label>
+                  <input type="radio" name="rating" value="1" id="star-1"> <label for="star-1"><i class='bx bxs-star'></i></label>
+                </div>
+              </div>           
+            </div>
+
+            <div class="row-form">
+              <textarea class="textarea-input" placeholder="Tulis testimonial Anda.." name="" id="" cols="30" rows="10"></textarea>
+            </div>
+
+  
+            <div class="row-btn-save-prestasi">
+              <button id="btn-send-testimonial">Send testimonial</button>
+            </div>
+          </section>
+        </section>
+      </section> 
+    </section>
   </section>
 </body>
 <script src="assets/js/jquery-3.6.0.min.js"></script>

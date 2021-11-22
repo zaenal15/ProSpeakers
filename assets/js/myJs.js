@@ -306,6 +306,7 @@ $(document).ready(function(){
   $('.close-popup-btn').click(function(){
     $('#row-popup-form-book').hide()
     $('#row-popup-form-prestasi').hide()
+    $('#row-popup-add-testimonial').hide()
   })
   
   //popup dashboard profil - content add book & add prestasi
@@ -316,6 +317,12 @@ $(document).ready(function(){
   $('#btn-add-prestasi').click(function(){
     $('#row-popup-form-prestasi').show()
   })
+  
+  //add testimonial
+  $('#btn-add-testimonial').click(function(){
+    $('#row-popup-add-testimonial').show()
+  })
+
 });
 
 //popup dashboard booking info 
