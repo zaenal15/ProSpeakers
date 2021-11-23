@@ -14,8 +14,10 @@
   --clr-blue-star-command: #0077B5;
   --clr-blue-lapis-lazuli: #005D8F;
   --clr-blue-honolulu: #0068AF;
+  --clr-orng-pale-pink: #FFD8D6;
   --clr-orng-bittersweet: #FF645C;
   --clr-orng-tart: #FF3D33;
+  --clr-grn-nyanza: #DDF8E2;
   --clr-grn-malachite: #4CD964;
   --clr-grn-malachite-2: #35D450;
   --clr-gld-web-golden: #FFD700;
@@ -463,7 +465,7 @@ body .checkbox :checked ~ .checkmark {
 }
 
 #main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .content-jadwal-2 .card .header-jadwal-content .row-list-content-jadwal .list-content-jadwal .status-jadwal-completed {
-  background-color: var(--clr-grn-malachite);
+  background-color: var(--clr-red-rosso-corsa);
   padding: 4px;
   line-height: 17px;
   border-radius: 3px;
@@ -474,7 +476,7 @@ body .checkbox :checked ~ .checkmark {
 }
 
 #main-content #dashboard-content #content-wrap-jadwal #row-content-jadwal .content-jadwal-2 .card .header-jadwal-content .row-list-content-jadwal .list-content-jadwal .status-jadwal-onschedule {
-  background-color: var(--clr-red-rosso-corsa);
+  background-color: var(--clr-grn-malachite);
   padding: 4px;
   line-height: 17px;
   border-radius: 3px;
