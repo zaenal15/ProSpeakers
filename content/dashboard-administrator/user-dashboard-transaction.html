@@ -49,8 +49,111 @@
 
     <!-- dashboard content  -->
     <section id="dashboard-content">
-      <section id="content-wrap-jadwal">
-        
+      <section id="content-wrap-transaction">
+        <section id="row-content-transaction">
+          <section class="header-list-transaction">
+            <div class="filter">
+              <button class="btn-status-transaction">All</button>
+              <button class="btn-status-transaction">Pending</button>
+              <button class="btn-status-transaction">Approved</button>
+            </div>
+            
+            <div class="src-bar">
+              <input type="text" placeholder="Search">
+              <i class="icofont-search-1"></i>
+            </div>
+          </section>
+
+          <section class="list-content-transaction">
+            <section class="card">
+              <section class="header-transaction">
+                <div class="speaker-booking">
+                  <label>Speaker</label>
+                  <p>Arnold Schwarzenegger</p>
+                </div>
+                <div class="status-booking-info">
+                  <label>Status</label>
+                  <p class="pending-status" >Pending</p>
+                  <p class="reschedule-status">Reschedule</p>
+                  <p class="approved-status">Approved</p>
+                </div>
+              </section>
+
+              <section class="body-transaction">
+                <div class="date-transaction">
+                  <div>
+                    <label>Tanggal Pemesanan</label>
+                    <p class="date-booking">10/10/2021 </p>
+                  </div>
+  
+                  <div>
+                    <label>Tanggal Booking</label>
+                    <p class="date-booking">25/10/2021 - 25/10/2021</p>
+                  </div>
+                </div>
+
+                <div>
+                  <label>Speaker</label>
+                  <p class="teks-speaker-booking">Arnold Schwarzenegger</p>
+                </div>
+
+                <div>
+                  <label>Judul Acara</label>
+                  <p>Seminar Nasional Digital Transformasi 4.0</p>
+                </div>
+              </section>
+
+              <section class="bottom-booking-info">
+                <button class="btn-detail-transaction"><i class="icofont-list"></i> Detail</button>
+                <button id="btn-add-testimonial" class="btn-testimonial"><i class='bx bxs-comment-detail'></i>Add testimonial</button>
+              </section>
+            </section>
+            
+            <section class="card">
+              <section class="header-transaction">
+                <div class="speaker-booking">
+                  <label>Speaker</label>
+                  <p>Arnold Schwarzenegger</p>
+                </div>
+                <div class="status-booking-info">
+                  <label>Status</label>
+                  <p class="pending-status">Pending</p>
+                  <p class="reschedule-status">Reschedule</p>
+                  <p class="approved-status">Approved</p>
+                </div>
+              </section>
+
+              <section class="body-transaction">
+                <div class="date-transaction">
+                  <div>
+                    <label>Tanggal Pemesanan</label>
+                    <p class="date-booking">10/10/2021 </p>
+                  </div>
+  
+                  <div>
+                    <label>Tanggal Booking</label>
+                    <p class="date-booking">25/10/2021 - 25/10/2021</p>
+                  </div>
+                </div>
+
+                <div>
+                  <label>Speaker</label>
+                  <p class="teks-speaker-booking">Arnold Schwarzenegger</p>
+                </div>
+
+                <div>
+                  <label>Judul Acara</label>
+                  <p>Seminar Nasional Digital Transformasi 4.0</p>
+                </div>
+              </section>
+
+              <section class="bottom-booking-info">
+                <button class="btn-detail-transaction"><i class="icofont-list"></i> Detail</button>
+                <button id="btn-add-testimonial" class="btn-testimonial"><i class='bx bxs-comment-detail'></i>Add testimonial</button>
+              </section>
+            </section>
+          </section>
+        </section>
       </section>
     </section>
     <!-- end dashboard content -->
@@ -65,7 +168,7 @@
         <section id="main-content-sidebar">
           
           <section id="sidebar-profile">
-            <img src="../../assets/img/speaker/arnold-schwarzenegger.jpg" alt="">
+            <img src="../../assets/img/icon/user-icon.svg" alt="">
             <div>
               <h2>Ronaldo Joko</h2>
               <p>User</p>
@@ -77,23 +180,23 @@
               <li id="jadwal-user-menu">
                 <a href="../dashboard-administrator/user-dashboard-jadwal.html">
                   <i class='bx bxs-calendar'></i>
-                  <p>Jadwal</p>
+                  <p>Schedule</p>
                 </a>
               </li>
               <li id="transaction-menu"  class="active">
-                <a href="">
+                <a href="../dashboard-administrator/user-dashboard-transaction.html">
                   <i class="icofont-list"></i>
                   <p>Transaction</p>
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="../dashboard-administrator/user-dashboard-profile.html">
                   <i class='bx bxs-user-detail' ></i>
                   <p>Profil</p>
                 </a>
               </li>
               <li>
-                <a href="">
+                <a href="../dashboard-administrator/user-dashboard-testi.html">
                   <i class='bx bxs-comment-detail'></i>
                   <p>Testimonials</p>
                 </a>
@@ -103,6 +206,132 @@
         </section>
       </section>
     </section><!-- end sidebar content -->
+
+    <!-- general -->
+    <!-- content-popup-detail-booking -->
+    <section id="row-popup-detail-transaction">
+      <section id="popup-detail-transaction">
+        <section id="row-content-detail-transaction" class="card section-content">
+          <section id="content-popup-detail-transaction" class="card-conntent">
+            <div class="title-popup-detail-transaction">
+              <h2>Booking Speaker</h2>
+              <button class="close-popup-btn"><i class="icofont-close"></i></button>
+            </div>
+  
+            <div class="ket-transaction">
+              <div class="row-ket-content">
+                <div class="row-detail-transaction">
+                  <div class="content-detail-transaction">
+                    <div class="img-detail-transaction">
+                      <img src="../../assets/img/speaker/arnold-schwarzenegger.jpg" alt="">
+                      
+                      <a href="../../profile-speaker.html" target="_blank">
+                        <button class="b">Lihat Profil</button>
+                      </a>
+                    </div>
+
+                    <div class="ket-1-datail-transaction">
+                      <div>
+                        <label for="">Speaker</label>
+                        <p style="color: #0077B5;">Arnold Schwarzenegger</p>
+                      </div>
+      
+                      <div>
+                        <label for="">Status</label>
+                        <p class="pending-status">Pending</p>
+                        <p class="reschedule-status">Reschedule</p>
+                        <p class="approved-status">Approved</p>
+                      </div>
+                      
+                      <div>
+                        <label>Tanggal Pemesanan</label>
+                        <p class="date-booking">10/10/2021</p>
+                      </div>
+
+                      <div>
+                        <label>Pemesanan Disetujui</label>
+                        <p class="date-booking">-</p>
+                      </div>
+                    </div>
+
+                    <div class="ket-2-detail-transaction">
+                      <div>
+                        <label>Tanggal Booking</label>
+                        <p class="date-booking">25/10/2021 - 25/10/2021</p>
+                      </div>
+                      
+                      <div>
+                        <label for="">Waktu Booking</label>
+                        <p style="color: #0077B5;">08:00 - 14:00</p>
+                      </div>
+
+                      <div>
+                        <label for="">Budget</label>
+                        <p style="color: #0077B5;">-</p>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="line"></div>
+  
+                <div>
+                  <label for="">Topic</label>
+                  <p>Digital Transformation</p>
+                </div>
+  
+                <div>
+                  <label for="">Judul Acara</label>
+                  <p>Seminar Nasional Digital Transformasi 4.0</p>
+                </div>
+  
+                <div>
+                  <label for="">Tentang Acara</label>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur unde reiciendis in cupiditate maxime voluptatibus! Neque quae quam nobis.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section> 
+    </section>
+
+
+    <!-- popup-content-add-testimonial-->
+    <section id="row-popup-add-testimonial">
+      <section id="popup-add-testimonial">
+        <section id="row-content-add-testimonial" class="card section-content">
+          <section id="content-add-testimonial" class="card-conntent">
+            <div class="title-popup-form-testimonial">
+              <h2>TESTIMONIAL SPEAKERS</h2>
+              <button class="close-popup-btn"><i class="icofont-close"></i></button>
+            </div>
+
+            <div class="row-content-rating">
+              <div class="rating-box">
+                <div class="rating-container">
+                  <input type="radio" name="rating" value="5" id="star-5"> <label for="star-5"><i class='bx bxs-star'></i></label>
+                  <input type="radio" name="rating" value="4" id="star-4"> <label for="star-4"><i class='bx bxs-star'></i></label>
+                  <input type="radio" name="rating" value="3" id="star-3"> <label for="star-3"><i class='bx bxs-star'></i></label>
+                  <input type="radio" name="rating" value="2" id="star-2"> <label for="star-2"><i class='bx bxs-star'></i></label>
+                  <input type="radio" name="rating" value="1" id="star-1"> <label for="star-1"><i class='bx bxs-star'></i></label>
+                </div>
+              </div>           
+            </div>
+
+            <div class="row-form">
+              <textarea class="textarea-input" placeholder="Tulis testimonial Anda.." name="" id="" cols="30" rows="10"></textarea>
+            </div>
+
+  
+            <div class="row-btn-save-testimonial">
+              <button id="btn-send-testimonial" class="btn-send-testimonial">Send testimonial</button>
+            </div>
+          </section>
+        </section>
+      </section> 
+    </section>
   </section> 
 </body>
 

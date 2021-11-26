@@ -704,6 +704,7 @@ body .checkbox :checked ~ .checkmark {
 }
 
 #main-content #topic #topic-content .card-content .card {
+  padding: 0;
   width: 290px;
   min-width: 290px;
   height: auto;
@@ -1824,9 +1825,11 @@ body .checkbox :checked ~ .checkmark {
 }
 
 #profile-speaker #profile-speaker-content #row-profile-speaker #ket-profile #row-card-3 #testimonial-user .row-testimonial-content .testimonial-user-content .list-testimonial {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 1fr;
+      grid-template-columns: auto 1fr;
+  gap: 1rem;
   gap: 1rem;
   border-bottom: 1px solid var(--clr-silver);
   padding-bottom: 1rem;
@@ -2789,7 +2792,7 @@ input.attribute_radio:checked + label {
   gap: 1rem;
 }
 
-#popup-add-testimonial #content-add-testimonial .title-popup-form-book, #popup-add-testimonial #content-add-testimonial .title-popup-form-prestasi, #popup-add-testimonial #content-add-testimonial .title-popup-detail-booking {
+#popup-add-testimonial #content-add-testimonial .title-popup-form-book, #popup-add-testimonial #content-add-testimonial .title-popup-form-prestasi, #popup-add-testimonial #content-add-testimonial .title-popup-detail-booking, #popup-add-testimonial #content-add-testimonial .title-popup-form-testimonial {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2798,7 +2801,7 @@ input.attribute_radio:checked + label {
           justify-content: space-between;
 }
 
-#popup-add-testimonial #content-add-testimonial .title-popup-form-book button, #popup-add-testimonial #content-add-testimonial .title-popup-form-prestasi button, #popup-add-testimonial #content-add-testimonial .title-popup-detail-booking button {
+#popup-add-testimonial #content-add-testimonial .title-popup-form-book button, #popup-add-testimonial #content-add-testimonial .title-popup-form-prestasi button, #popup-add-testimonial #content-add-testimonial .title-popup-detail-booking button, #popup-add-testimonial #content-add-testimonial .title-popup-form-testimonial button {
   width: 25px;
   height: 25px;
   border-radius: 50%;

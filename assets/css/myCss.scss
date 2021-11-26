@@ -631,6 +631,7 @@ body {
         }
 
         .card {
+          padding: 0;
           width: 290px;
           min-width: 290px;
           height: auto;
@@ -1563,7 +1564,9 @@ body {
                 flex-direction: column;
                 gap: 1rem;
                 .list-testimonial{
-                  display: flex;
+                  display: grid;
+                  grid-template-columns: auto 1fr;
+                  gap: 1rem;
                   gap: 1rem;
                   border-bottom: 1px solid var(--clr-silver);
                   padding-bottom: 1rem;
@@ -2387,7 +2390,7 @@ input.attribute_radio {
       flex-direction: column;
       gap: 1rem;
 
-      .title-popup-form-book, .title-popup-form-prestasi, .title-popup-detail-booking{
+      .title-popup-form-book, .title-popup-form-prestasi, .title-popup-detail-booking, .title-popup-form-testimonial{
         display: flex;
         justify-content: space-between;
         button{

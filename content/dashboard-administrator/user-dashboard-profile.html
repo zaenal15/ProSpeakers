@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProSpeakers</title>
+  <!-- Favicons -->
+  <link href="../../assets/img/favicon.png" rel="icon">
+  <link rel="stylesheet" href="../../assets/vendor/icofont/icofont.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/boxicons/css/boxicons.min.css">
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- MyCss -->
+  <link rel="stylesheet" href="../../content/dashboard-administrator/css/dasboard.css">
+</head>
+
+<body>
+  <section id="main-content">
+    <!-- nav-content -->
+    <section id="navbar">
+      <section id="nav-left-dashboard">
+        <div class="nav-title">
+          <h3>Dashboard</h3>
+        </div>
+      </section>
+
+      <section id="nav-right-dashboard">
+        <section class="nav-right">
+          <div>
+            <div class="nr-li" id="nr_main">
+             <img src="../../assets/img/icon/user-icon.svg" alt="profile_img">
+             <i class="icofont-caret-down"></i>
+              <div class="main-menu-nr">
+                <div class="content-menu-nr">
+                  <div class="list-content-nr">
+                    <li><i class='bx bxs-home' ></i>Home</li>
+                    <li><i class="icofont-gear-alt"></i>Setting</li>
+                    <li><i class="icofont-logout"></i>Logout</li>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </section>
+    <!-- end nav content -->
+
+    <!-- dashboard content  -->
+    <section id="dashboard-content">
+      <section id="content-wrap-profile-user">
+        <section class="content-profile-user">
+          <section class="profile-content-display card">
+            <div class="foto-profile-user">
+              <img class="picture-profile-foto" src="../../assets/img/icon/user-icon.svg">
+            </div>
+            <div class="name-location-profile">
+              <p>Ronaldo Joko</p>
+            </div>
+            <div class="location-user-profile">
+              <i class="icofont-location-pin"></i>
+              <p>Bandung, Jawa Barat</p>
+            </div>
+          </section>
+          <section class="profile-detail-display card">
+            <div class="detail-user-profile">
+              <div>
+                <p class="header-user-profile">
+                  Nama Lengkap
+                </p>
+                <p class="ket-profile-user">
+                  Ronaldo Joko
+                </p>
+              </div>
+              <div>
+                <p class="header-user-profile">
+                  Gender
+                </p>
+                <p class="ket-profile-user">
+                  Pria
+                </p>
+              </div>
+              <div>
+                <p class="header-user-profile">
+                  Nomer Telpon
+                </p>
+                <p class="ket-profile-user">
+                  +62 821942113196
+                </p>
+              </div>
+              <div>
+                <p class="header-user-profile">
+                  Email
+                </p>
+                <p class="ket-profile-user">
+                  ronaldoJoko@gmail.com
+                </p>
+              </div>
+              <div>
+                <p class="header-user-profile">
+                  Alamat
+                </p>
+                <p class="ket-profile-user">
+                  Jl. Ki Hajar Dewantara no 21
+                </p>
+              </div>
+              <div>
+                <p class="header-user-profile">
+                  Kota
+                </p>
+                <p class="ket-profile-user">
+                  Bandung
+                </p>
+              </div>
+              <div>
+                <p class="header-user-profile">
+                  Provinsi
+                </p>
+                <p class="ket-profile-user">
+                  Jawa Barat
+                </p>
+              </div>
+            </div>
+          </section>
+          <section class="profile-form-display card">
+            <section class="wrap-content-form">
+              <section class="wrap-form-profile-content">
+                <div class="avatar-upload">
+                  <div class="avatar-edit">
+                    <input type='file' id="imageUpload" accept=".png, .jpg, .jpeg" />
+                    <label class="icon-uplod-img" for="imageUpload"><i class='bx bxs-camera'></i></label>
+                  </div>
+                  <div class="avatar-preview">
+                    <div id="imagePreview">
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+              <section class="wrap-form-input-content">
+                <div class="row-form-name row-form">
+                  <label class="form-title" for="">Nama Lengkap</label>
+                  <input class="form" type="text" placeholder="Nama Lengkap">
+                </div>
+    
+                <div class="row-form-telpon row-form">
+                  <label class="form-title" for="">Nomer Telpon</label>
+                  <input class="form" type="tel" placeholder="Nomer Telpon">
+                </div>
+                            
+                <div class="row-form-gender row-form">
+                  <label class="form-title" for="">Gender</label>
+                  <div class="gender-form">
+                    <div>
+                      <input name="gender" type="radio" value="pria" checked>
+                      <label for="">Pria</label>
+                    </div>
+                    <div>
+                      <input name="gender" type="radio" value="wanita">
+                      <label for="">Wanita</label>
+                    </div>
+                  </div>
+                </div>
+    
+                  <div class="row-form-email row-form">
+                    <label class="form-title" for="">Email</label>
+                    <input class="form" type="text" placeholder="Email">
+                  </div>
+      
+                  <div class="row-form-alamat row-form">
+                    <label class="form-title" for="">Alamat</label>
+                    <textarea placeholder="Alamat" class="textarea-input" name="" id="" cols="30" rows="2"></textarea>
+                  </div>
+    
+                
+                  <div class="row-form-kota row-form">
+                    <label class="form-title" for="">Kota</label>
+                    <select class="input-select" name="" id="">
+                      <option value="">Pilih</option>
+                      <option value="">Bandung</option>
+                      <option value="">Makassar</option>
+                    </select>
+                  </div>
+                  
+                  <div class="row-form-provinsi row-form">
+                    <label class="form-title" for="">Provinsi</label>
+                    <select class="input-select" name="" id="">
+                      <option value="">Pilih</option>
+                      <option value="">Jawa Barat</option>
+                      <option value="">Sulawesi Selatan</option>
+                    </select>
+                  </div>
+                
+                  <div class="row-form-btn row-form">
+                    <button class="btn-submit">Save</button>
+                  </div>
+              </section>
+            </section>
+          </section>
+        </section>
+      </section>
+    </section>
+    <!-- end dashboard content -->
+
+    <!-- sidebar content -->
+    <section id="sidebar">
+      <section id="content-wrap-sidebar">
+        <section id="sidebar-img">
+         <img src="../../assets/img/logo-prospeakers.png" alt="">
+        </section>
+        
+        <section id="main-content-sidebar">
+          <section id="sidebar-profile">
+            <img src="../../assets/img/icon/user-icon.svg" alt="">
+            <div>
+              <h2>Ronaldo Joko</h2>
+              <p>User</p>
+            </div>
+          </section>
+    
+          <section id="sidebar-menu">
+            <ul>
+              <li id="jadwal-user-menu">
+                <a href="../dashboard-administrator/user-dashboard-jadwal.html">
+                  <i class='bx bxs-calendar'></i>
+                  <p>Schedule</p>
+                </a>
+              </li>
+              <li id="transaction-menu">
+                <a href="../dashboard-administrator/user-dashboard-transaction.html">
+                  <i class="icofont-list"></i>
+                  <p>Transaction</p>
+                </a>
+              </li>
+              <li class="active">
+                <a href="../dashboard-administrator/user-dashboard-profile.html">
+                  <i class='bx bxs-user-detail' ></i>
+                  <p>Profil</p>
+                </a>
+              </li>
+              <li>
+                <a href="../dashboard-administrator/user-dashboard-testi.html">
+                  <i class='bx bxs-comment-detail'></i>
+                  <p>Testimonials</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </section>
+      </section>
+    </section><!-- end sidebar content -->
+  </section> 
+</body>
+
+<script src="../../assets/js/jquery-3.6.0.min.js"></script>
+<script src="../../assets/js/myJs.js"></script>
+
+</html>

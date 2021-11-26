@@ -319,7 +319,7 @@ $(document).ready(function(){
   })
   
   //add testimonial
-  $('#btn-add-testimonial').click(function(){
+  $('.btn-testimonial').click(function(){
     $('#row-popup-add-testimonial').show()
   })
 
@@ -328,10 +328,11 @@ $(document).ready(function(){
 //popup dashboard booking info 
 $(document).ready(function(){
   $('.close-popup-btn').click(function(){
-    $('#row-popup-detail-booking').hide()
+    $('#row-popup-detail-booking, #row-popup-detail-transaction').hide()
   })
-  $('.btn-detail').click(function(){
+  $('.btn-detail, .btn-detail-transaction').click(function(){
     $('#row-popup-detail-booking').show()
+    $('#row-popup-detail-transaction').show()
   })
 });
 
